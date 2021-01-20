@@ -25,126 +25,126 @@
 :affectsOS rdf:type owl:ObjectProperty ;
            rdfs:domain :SoftwareVulnerability ;
            rdfs:range :OperatingSystem ;
-           rdfs:label "a vulnerability that is present in an operating system"@en .
+           rdfs:comment "a vulnerability that is present in an operating system"@en .
 
 
 ###  http://dockerpedia.inf.utfsm.cl/vocab#builds
 :builds rdf:type owl:ObjectProperty ;
         rdfs:domain :DockerFile ;
         rdfs:range :SoftwareImage ;
-        rdfs:label "A DockerFile builds a SoftwareImage since the DockerFile is a description of that image"@en .
+        rdfs:comment "A DockerFile builds a SoftwareImage since the DockerFile is a description of that image"@en .
 
 
 ###  http://dockerpedia.inf.utfsm.cl/vocab#composedBy
 :composedBy rdf:type owl:ObjectProperty ;
             rdfs:domain :SoftwareImage ;
             rdfs:range :ImageLayer ;
-            rdfs:label "One Software image may be composed of several layers"@en .
+            rdfs:comment "One Software image may be composed of several layers"@en .
 
 
 ###  http://dockerpedia.inf.utfsm.cl/vocab#containPackages
 :containPackages rdf:type owl:ObjectProperty ;
                  rdfs:domain :SoftwareImage ;
                  rdfs:range :SoftwarePackage ;
-                 rdfs:label "a software image contains several packages"@en .
+                 rdfs:comment "a software image contains several packages"@en .
 
 
 ###  http://dockerpedia.inf.utfsm.cl/vocab#deployedOn
 :deployedOn rdf:type owl:ObjectProperty ;
             rdfs:domain :SoftwarePackage ;
             rdfs:range :FileSystem ;
-            rdfs:label "software images deploy on FileSystems"@en .
+            rdfs:comment "software images deploy on FileSystems"@en .
 
 
 ###  http://dockerpedia.inf.utfsm.cl/vocab#fixPackageVersion
 :fixPackageVersion rdf:type owl:ObjectProperty ;
                    rdfs:domain :SecurityRevision ;
                    rdfs:range :PackageVersion ;
-                 rdfs:label "a security revision fixes a package version"@en .
+                 rdfs:comment "a security revision fixes a package version"@en .
 
 
 ###  http://dockerpedia.inf.utfsm.cl/vocab#fixVulnerability
 :fixVulnerability rdf:type owl:ObjectProperty ;
                   rdfs:domain :SecurityRevision ;
                   rdfs:range :SoftwareVulnerability ;
-                 rdfs:label "a security revision fixes a vulnerability"@en .
+                 rdfs:comment "a security revision fixes a vulnerability"@en .
 
 
 ###  http://dockerpedia.inf.utfsm.cl/vocab#hasFileSystem
 :hasFileSystem rdf:type owl:ObjectProperty ;
                rdfs:domain :OperatingSystem ;
                rdfs:range :FileSystem ;
-                 rdfs:label "An OS has a file system in which install software"@en .
+                 rdfs:comment "An OS has a file system in which install software"@en .
 
 
 ###  http://dockerpedia.inf.utfsm.cl/vocab#hasImage
 :hasImage rdf:type owl:ObjectProperty ;
           rdfs:domain :DockerFile ;
           rdfs:range :SoftwareImage ;
-                 rdfs:label "A docker file has software images"@en .
+                 rdfs:comment "A docker file has software images"@en .
 
 
 ###  http://dockerpedia.inf.utfsm.cl/vocab#hasLayer
 :hasLayer rdf:type owl:ObjectProperty ;
           rdfs:domain :SoftwareImage ;
           rdfs:range :ImageLayer ;
-                 rdfs:label "one software images may be composed of several layers"@en .
+                 rdfs:comment "one software images may be composed of several layers"@en .
 
 
 ###  http://dockerpedia.inf.utfsm.cl/vocab#hasPackages
 :hasPackages rdf:type owl:ObjectProperty ;
              rdfs:domain :OperatingSystem ;
              rdfs:range :SoftwarePackage ;
-                 rdfs:label "one OS may have installed several software packages on it"@en .
+                 rdfs:comment "one OS may have installed several software packages on it"@en .
 
 
 ###  http://dockerpedia.inf.utfsm.cl/vocab#hasRevision
 :hasRevision rdf:type owl:ObjectProperty ;
              rdfs:domain :PackageVersion ;
              rdfs:range :SecurityRevision ;
-                 rdfs:label "one package version may have a security revision fixing some vulnerability"@en .
+                 rdfs:comment "one package version may have a security revision fixing some vulnerability"@en .
 
 
 ###  http://dockerpedia.inf.utfsm.cl/vocab#hasVulnerability
 :hasVulnerability rdf:type owl:ObjectProperty ;
                   rdfs:domain :PackageVersion ;
                   rdfs:range :SoftwareVulnerability ;
-                 rdfs:label "One package version may have one or more software vulnerabilities"@en .
+                 rdfs:comment "One package version may have one or more software vulnerabilities"@en .
 
 
 ###  http://dockerpedia.inf.utfsm.cl/vocab#imageIdentifier
 :imageIdentifier rdf:type owl:ObjectProperty ;
                  rdfs:domain :SoftwareImage ;
                  rdfs:range :imageIdentifier ;
-                 rdfs:label "software images have identifiers"@en .
+                 rdfs:comment "software images have identifiers"@en .
 
 
 ###  http://dockerpedia.inf.utfsm.cl/vocab#isAffectedBy
 :isAffectedBy rdf:type owl:ObjectProperty ;
               rdfs:domain :OperatingSystem ;
               rdfs:range :SoftwareVulnerability ;
-                 rdfs:label "Operating Systems are affected by software vulnerabilities"@en .
+                 rdfs:comment "Operating Systems are affected by software vulnerabilities"@en .
 
 
 ###  http://dockerpedia.inf.utfsm.cl/vocab#isLayerOf
 :isLayerOf rdf:type owl:ObjectProperty ;
            rdfs:domain :ImageLayer ;
            rdfs:range :Image ;
-                 rdfs:label "one software layer is part of a software image"@en .
+                 rdfs:comment "one software layer is part of a software image"@en .
 
 
 ###  http://dockerpedia.inf.utfsm.cl/vocab#isModifiedBy
 :isModifiedBy rdf:type owl:ObjectProperty ;
               rdfs:domain :ImageLayer ;
               rdfs:range :PackageVersion ;
-                 rdfs:label "an image layer modifies a package version"@en .
+                 rdfs:comment "an image layer modifies a package version"@en .
 
 
 ###  http://dockerpedia.inf.utfsm.cl/vocab#isPackageOf
 :isPackageOf rdf:type owl:ObjectProperty ;
              rdfs:domain <http://purl.org/net/wicus-stack#SoftwareComponent> ;
              rdfs:range :OperatingSystem ;
-                 rdfs:label "software components are package on an Operating System"@en .
+                 rdfs:comment "software components are package on an Operating System"@en .
 
 
 ###  http://dockerpedia.inf.utfsm.cl/vocab#isPresent
@@ -155,21 +155,21 @@
 :isVersionOf rdf:type owl:ObjectProperty ;
              rdfs:domain :PackageVersion ;
              rdfs:range <http://purl.org/net/wicus-stack#SoftwareComponent> ;
-                 rdfs:label "a package version is a versuon of a software component"@en .
+                 rdfs:comment "a package version is a versuon of a software component"@en .
 
 
 ###  http://dockerpedia.inf.utfsm.cl/vocab#modifyLayer
 :modifyLayer rdf:type owl:ObjectProperty ;
              rdfs:domain :PackageVersion ;
              rdfs:range :ImageLayer ;
-                 rdfs:label "a package version modifies a layer"@en .
+                 rdfs:comment "a package version modifies a layer"@en .
 
 
 ###  http://dockerpedia.inf.utfsm.cl/vocab#usesOS
 :usesOS rdf:type owl:ObjectProperty ;
         rdfs:domain :ImageLayer ;
         rdfs:range :OperatingSystem ;
-                 rdfs:label "a software layer use an Operating System"@en .
+                 rdfs:comment "a software layer use an Operating System"@en .
 
 
 ###  http://purl.org/net/wicus-stack#hasVersion
@@ -192,75 +192,75 @@
 ###  http://dockerpedia.inf.utfsm.cl/vocab#DockerFile
 :DockerFile rdf:type owl:Class ;
             rdfs:subClassOf <http://purl.org/net/wicus-stack#DeploymentScript> ;
-            rdfs:label "A file containing the instructions required to build an image (docker:SoftwareImage) in the Docker framework"@en .
+            rdfs:comment "A file containing the instructions required to build an image (docker:SoftwareImage) in the Docker framework"@en .
 
 
 ###  http://dockerpedia.inf.utfsm.cl/vocab#FileSystem
 :FileSystem rdf:type owl:Class ;
-        rdfs:label "The way in which files are named and where they are placed logically for storage and retrieval."@en .
+        rdfs:comment "The way in which files are named and where they are placed logically for storage and retrieval."@en .
 
 
 ###  http://dockerpedia.inf.utfsm.cl/vocab#Image
 :Image rdf:type owl:Class ;
-        rdfs:label "A serialized copy of the state of a software stored in some non-volatile form such as a file."@en .
+        rdfs:comment "A serialized copy of the state of a software stored in some non-volatile form such as a file."@en .
 
 
 ###  http://dockerpedia.inf.utfsm.cl/vocab#ImageLayer
 :ImageLayer rdf:type owl:Class ;
-        rdfs:label "A layer of a Docker image are a set files generated from running a command from a DockerFile." @en .
+        rdfs:comment "A layer of a Docker image are a set files generated from running a command from a DockerFile." @en .
  
 
 ###  http://dockerpedia.inf.utfsm.cl/vocab#ImageVersion
 :ImageVersion rdf:type owl:Class ;
               rdfs:subClassOf <http://purl.org/net/wicus-stack#Version> ;
-              rdfs:label "version of a software image"@en .
+              rdfs:comment "version of a software image"@en .
 
 
 ###  http://dockerpedia.inf.utfsm.cl/vocab#LayerModification
 :LayerModification rdf:type owl:Class ;
-                rdfs:label "A modification of a layer in a DockerFile"@en .
+                rdfs:comment "A modification of a layer in a DockerFile"@en .
 
 
 ###  http://dockerpedia.inf.utfsm.cl/vocab#OperatingSystem
 :OperatingSystem rdf:type owl:Class ;
-                rdfs:label "A software operating system repersentation"@en .
+                rdfs:comment "A software operating system repersentation"@en .
 
 ###  http://dockerpedia.inf.utfsm.cl/vocab#PackageVersion
 :PackageVersion rdf:type owl:Class ;
                 rdfs:subClassOf <http://purl.org/net/wicus-stack#Version> ;
-                rdfs:label "Version of a software package"@en .
+                rdfs:comment "Version of a software package"@en .
 
 
 ###  http://dockerpedia.inf.utfsm.cl/vocab#SecurityRevision
 :SecurityRevision rdf:type owl:Class ;
-                rdfs:label "security revision of a software package"@en .
+                rdfs:comment "security revision of a software package"@en .
 
 ###  http://dockerpedia.inf.utfsm.cl/vocab#SoftwareImage
 :SoftwareImage rdf:type owl:Class ;
                rdfs:subClassOf :Image ;
-               rdfs:label "A read-only template that contains a set of instructions for creating a container."@en .
+               rdfs:comment "A read-only template that contains a set of instructions for creating a container."@en .
 
 
 ###  http://dockerpedia.inf.utfsm.cl/vocab#SoftwarePackage
 :SoftwarePackage rdf:type owl:Class ;
                  rdfs:subClassOf <http://purl.org/net/wicus-stack#SoftwareComponent> ;
-                 rdfs:label "Set of individual software files or resources that are packed together as a software collection that provides certain functionality as part of a larger system." @en .
+                 rdfs:comment "Set of individual software files or resources that are packed together as a software collection that provides certain functionality as part of a larger system." @en .
 
 
 ###  http://dockerpedia.inf.utfsm.cl/vocab#SoftwareVulnerability
 :SoftwareVulnerability rdf:type owl:Class ;
-                rdfs:label "a mistake in a software component that leaves it open to exploitation by an adversary"@en .
+                rdfs:comment "a mistake in a software component that leaves it open to exploitation by an adversary"@en .
 
 
 ###  http://dockerpedia.inf.utfsm.cl/vocab#imageIdentifier
 :imageIdentifier rdf:type owl:Class ;
                  rdfs:subClassOf <http://purl.org/dc/elements/1.1/identifier> ;
-                 rdfs:label "An identifier of a software image"@en .
+                 rdfs:comment "An identifier of a software image"@en .
 
 
 ###  http://purl.org/dc/elements/1.1/identifier
 <http://purl.org/dc/elements/1.1/identifier> rdf:type owl:Class ;
-                                rdfs:label "A name that identifies either a unique object or a unique class of objects."@en .
+                                rdfs:comment "A name that identifies either a unique object or a unique class of objects."@en .
 
 
 ###  Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/

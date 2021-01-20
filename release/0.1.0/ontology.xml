@@ -7,88 +7,88 @@
     xmlns="http://dockerpedia.inf.utfsm.cl/vocab#"
     xmlns:xsd="http://www.w3.org/2001/XMLSchema#" > 
   <rdf:Description rdf:about="http://dockerpedia.inf.utfsm.cl/vocab#affectsOS">
-    <rdfs:label xml:lang="en">a vulnerability that is present in an operating system</rdfs:label>
+    <rdfs:comment xml:lang="en">a vulnerability that is present in an operating system</rdfs:comment>
     <rdfs:range rdf:resource="http://dockerpedia.inf.utfsm.cl/vocab#OperatingSystem"/>
     <rdfs:domain rdf:resource="http://dockerpedia.inf.utfsm.cl/vocab#SoftwareVulnerability"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/identifier">
-    <rdfs:label xml:lang="en">A name that identifies either a unique object or a unique class of objects.</rdfs:label>
+    <rdfs:comment xml:lang="en">A name that identifies either a unique object or a unique class of objects.</rdfs:comment>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/net/wicus-stack#hasVersion">
     <rdfs:range rdf:resource="http://dockerpedia.inf.utfsm.cl/vocab#PackageVersion"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://dockerpedia.inf.utfsm.cl/vocab#hasRevision">
-    <rdfs:label xml:lang="en">one package version may have a security revision fixing some vulnerability</rdfs:label>
+    <rdfs:comment xml:lang="en">one package version may have a security revision fixing some vulnerability</rdfs:comment>
     <rdfs:range rdf:resource="http://dockerpedia.inf.utfsm.cl/vocab#SecurityRevision"/>
     <rdfs:domain rdf:resource="http://dockerpedia.inf.utfsm.cl/vocab#PackageVersion"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://dockerpedia.inf.utfsm.cl/vocab#isVersionOf">
-    <rdfs:label xml:lang="en">a package version is a versuon of a software component</rdfs:label>
+    <rdfs:comment xml:lang="en">a package version is a versuon of a software component</rdfs:comment>
     <rdfs:range rdf:resource="http://purl.org/net/wicus-stack#SoftwareComponent"/>
     <rdfs:domain rdf:resource="http://dockerpedia.inf.utfsm.cl/vocab#PackageVersion"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://dockerpedia.inf.utfsm.cl/vocab#SoftwarePackage">
-    <rdfs:label xml:lang="en">Set of individual software files or resources that are packed together as a software collection that provides certain functionality as part of a larger system.</rdfs:label>
+    <rdfs:comment xml:lang="en">Set of individual software files or resources that are packed together as a software collection that provides certain functionality as part of a larger system.</rdfs:comment>
     <rdfs:subClassOf rdf:resource="http://purl.org/net/wicus-stack#SoftwareComponent"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://dockerpedia.inf.utfsm.cl/vocab#SoftwareImage">
-    <rdfs:label xml:lang="en">A read-only template that contains a set of instructions for creating a container.</rdfs:label>
+    <rdfs:comment xml:lang="en">A read-only template that contains a set of instructions for creating a container.</rdfs:comment>
     <rdfs:subClassOf rdf:resource="http://dockerpedia.inf.utfsm.cl/vocab#Image"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://dockerpedia.inf.utfsm.cl/vocab#ImageLayer">
-    <rdfs:label xml:lang="en">A layer of a Docker image are a set files generated from running a command from a DockerFile.</rdfs:label>
+    <rdfs:comment xml:lang="en">A layer of a Docker image are a set files generated from running a command from a DockerFile.</rdfs:comment>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://dockerpedia.inf.utfsm.cl/vocab#hasVulnerability">
-    <rdfs:label xml:lang="en">One package version may have one or more software vulnerabilities</rdfs:label>
+    <rdfs:comment xml:lang="en">One package version may have one or more software vulnerabilities</rdfs:comment>
     <rdfs:range rdf:resource="http://dockerpedia.inf.utfsm.cl/vocab#SoftwareVulnerability"/>
     <rdfs:domain rdf:resource="http://dockerpedia.inf.utfsm.cl/vocab#PackageVersion"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://dockerpedia.inf.utfsm.cl/vocab#deployedOn">
-    <rdfs:label xml:lang="en">software images deploy on FileSystems</rdfs:label>
+    <rdfs:comment xml:lang="en">software images deploy on FileSystems</rdfs:comment>
     <rdfs:range rdf:resource="http://dockerpedia.inf.utfsm.cl/vocab#FileSystem"/>
     <rdfs:domain rdf:resource="http://dockerpedia.inf.utfsm.cl/vocab#SoftwarePackage"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://dockerpedia.inf.utfsm.cl/vocab#isModifiedBy">
-    <rdfs:label xml:lang="en">an image layer modifies a package version</rdfs:label>
+    <rdfs:comment xml:lang="en">an image layer modifies a package version</rdfs:comment>
     <rdfs:range rdf:resource="http://dockerpedia.inf.utfsm.cl/vocab#PackageVersion"/>
     <rdfs:domain rdf:resource="http://dockerpedia.inf.utfsm.cl/vocab#ImageLayer"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://dockerpedia.inf.utfsm.cl/vocab#DockerFile">
-    <rdfs:label xml:lang="en">A file containing the instructions required to build an image (docker:SoftwareImage) in the Docker framework</rdfs:label>
+    <rdfs:comment xml:lang="en">A file containing the instructions required to build an image (docker:SoftwareImage) in the Docker framework</rdfs:comment>
     <rdfs:subClassOf rdf:resource="http://purl.org/net/wicus-stack#DeploymentScript"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://dockerpedia.inf.utfsm.cl/vocab#OperatingSystem">
-    <rdfs:label xml:lang="en">A software operating system repersentation</rdfs:label>
+    <rdfs:comment xml:lang="en">A software operating system repersentation</rdfs:comment>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://dockerpedia.inf.utfsm.cl/vocab#isPackageOf">
-    <rdfs:label xml:lang="en">software components are package on an Operating System</rdfs:label>
+    <rdfs:comment xml:lang="en">software components are package on an Operating System</rdfs:comment>
     <rdfs:range rdf:resource="http://dockerpedia.inf.utfsm.cl/vocab#OperatingSystem"/>
     <rdfs:domain rdf:resource="http://purl.org/net/wicus-stack#SoftwareComponent"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://dockerpedia.inf.utfsm.cl/vocab#LayerModification">
-    <rdfs:label xml:lang="en">A modification of a layer in a DockerFile</rdfs:label>
+    <rdfs:comment xml:lang="en">A modification of a layer in a DockerFile</rdfs:comment>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://dockerpedia.inf.utfsm.cl/vocab#imageIdentifier">
-    <rdfs:label xml:lang="en">An identifier of a software image</rdfs:label>
+    <rdfs:comment xml:lang="en">An identifier of a software image</rdfs:comment>
     <rdfs:subClassOf rdf:resource="http://purl.org/dc/elements/1.1/identifier"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:label xml:lang="en">software images have identifiers</rdfs:label>
+    <rdfs:comment xml:lang="en">software images have identifiers</rdfs:comment>
     <rdfs:range rdf:resource="http://dockerpedia.inf.utfsm.cl/vocab#imageIdentifier"/>
     <rdfs:domain rdf:resource="http://dockerpedia.inf.utfsm.cl/vocab#SoftwareImage"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
@@ -97,84 +97,84 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://dockerpedia.inf.utfsm.cl/vocab#hasPackages">
-    <rdfs:label xml:lang="en">one OS may have installed several software packages on it</rdfs:label>
+    <rdfs:comment xml:lang="en">one OS may have installed several software packages on it</rdfs:comment>
     <rdfs:range rdf:resource="http://dockerpedia.inf.utfsm.cl/vocab#SoftwarePackage"/>
     <rdfs:domain rdf:resource="http://dockerpedia.inf.utfsm.cl/vocab#OperatingSystem"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://dockerpedia.inf.utfsm.cl/vocab#hasLayer">
-    <rdfs:label xml:lang="en">one software images may be composed of several layers</rdfs:label>
+    <rdfs:comment xml:lang="en">one software images may be composed of several layers</rdfs:comment>
     <rdfs:range rdf:resource="http://dockerpedia.inf.utfsm.cl/vocab#ImageLayer"/>
     <rdfs:domain rdf:resource="http://dockerpedia.inf.utfsm.cl/vocab#SoftwareImage"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://dockerpedia.inf.utfsm.cl/vocab#containPackages">
-    <rdfs:label xml:lang="en">a software image contains several packages</rdfs:label>
+    <rdfs:comment xml:lang="en">a software image contains several packages</rdfs:comment>
     <rdfs:range rdf:resource="http://dockerpedia.inf.utfsm.cl/vocab#SoftwarePackage"/>
     <rdfs:domain rdf:resource="http://dockerpedia.inf.utfsm.cl/vocab#SoftwareImage"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://dockerpedia.inf.utfsm.cl/vocab#isLayerOf">
-    <rdfs:label xml:lang="en">one software layer is part of a software image</rdfs:label>
+    <rdfs:comment xml:lang="en">one software layer is part of a software image</rdfs:comment>
     <rdfs:range rdf:resource="http://dockerpedia.inf.utfsm.cl/vocab#Image"/>
     <rdfs:domain rdf:resource="http://dockerpedia.inf.utfsm.cl/vocab#ImageLayer"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://dockerpedia.inf.utfsm.cl/vocab#builds">
-    <rdfs:label xml:lang="en">A DockerFile builds a SoftwareImage since the DockerFile is a description of that image</rdfs:label>
+    <rdfs:comment xml:lang="en">A DockerFile builds a SoftwareImage since the DockerFile is a description of that image</rdfs:comment>
     <rdfs:range rdf:resource="http://dockerpedia.inf.utfsm.cl/vocab#SoftwareImage"/>
     <rdfs:domain rdf:resource="http://dockerpedia.inf.utfsm.cl/vocab#DockerFile"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://dockerpedia.inf.utfsm.cl/vocab#modifyLayer">
-    <rdfs:label xml:lang="en">a package version modifies a layer</rdfs:label>
+    <rdfs:comment xml:lang="en">a package version modifies a layer</rdfs:comment>
     <rdfs:range rdf:resource="http://dockerpedia.inf.utfsm.cl/vocab#ImageLayer"/>
     <rdfs:domain rdf:resource="http://dockerpedia.inf.utfsm.cl/vocab#PackageVersion"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://dockerpedia.inf.utfsm.cl/vocab#Image">
-    <rdfs:label xml:lang="en">A serialized copy of the state of a software stored in some non-volatile form such as a file.</rdfs:label>
+    <rdfs:comment xml:lang="en">A serialized copy of the state of a software stored in some non-volatile form such as a file.</rdfs:comment>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://dockerpedia.inf.utfsm.cl/vocab#SoftwareVulnerability">
-    <rdfs:label xml:lang="en">a mistake in a software component that leaves it open to exploitation by an adversary</rdfs:label>
+    <rdfs:comment xml:lang="en">a mistake in a software component that leaves it open to exploitation by an adversary</rdfs:comment>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://dockerpedia.inf.utfsm.cl/vocab#isAffectedBy">
-    <rdfs:label xml:lang="en">Operating Systems are affected by software vulnerabilities</rdfs:label>
+    <rdfs:comment xml:lang="en">Operating Systems are affected by software vulnerabilities</rdfs:comment>
     <rdfs:range rdf:resource="http://dockerpedia.inf.utfsm.cl/vocab#SoftwareVulnerability"/>
     <rdfs:domain rdf:resource="http://dockerpedia.inf.utfsm.cl/vocab#OperatingSystem"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://dockerpedia.inf.utfsm.cl/vocab#hasFileSystem">
-    <rdfs:label xml:lang="en">An OS has a file system in which install software</rdfs:label>
+    <rdfs:comment xml:lang="en">An OS has a file system in which install software</rdfs:comment>
     <rdfs:range rdf:resource="http://dockerpedia.inf.utfsm.cl/vocab#FileSystem"/>
     <rdfs:domain rdf:resource="http://dockerpedia.inf.utfsm.cl/vocab#OperatingSystem"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://dockerpedia.inf.utfsm.cl/vocab#hasImage">
-    <rdfs:label xml:lang="en">A docker file has software images</rdfs:label>
+    <rdfs:comment xml:lang="en">A docker file has software images</rdfs:comment>
     <rdfs:range rdf:resource="http://dockerpedia.inf.utfsm.cl/vocab#SoftwareImage"/>
     <rdfs:domain rdf:resource="http://dockerpedia.inf.utfsm.cl/vocab#DockerFile"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://dockerpedia.inf.utfsm.cl/vocab#ImageVersion">
-    <rdfs:label xml:lang="en">version of a software image</rdfs:label>
+    <rdfs:comment xml:lang="en">version of a software image</rdfs:comment>
     <rdfs:subClassOf rdf:resource="http://purl.org/net/wicus-stack#Version"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://dockerpedia.inf.utfsm.cl/vocab#usesOS">
-    <rdfs:label xml:lang="en">a software layer use an Operating System</rdfs:label>
+    <rdfs:comment xml:lang="en">a software layer use an Operating System</rdfs:comment>
     <rdfs:range rdf:resource="http://dockerpedia.inf.utfsm.cl/vocab#OperatingSystem"/>
     <rdfs:domain rdf:resource="http://dockerpedia.inf.utfsm.cl/vocab#ImageLayer"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://dockerpedia.inf.utfsm.cl/vocab#FileSystem">
-    <rdfs:label xml:lang="en">The way in which files are named and where they are placed logically for storage and retrieval.</rdfs:label>
+    <rdfs:comment xml:lang="en">The way in which files are named and where they are placed logically for storage and retrieval.</rdfs:comment>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://dockerpedia.inf.utfsm.cl/vocab#PackageVersion">
-    <rdfs:label xml:lang="en">Version of a software package</rdfs:label>
+    <rdfs:comment xml:lang="en">Version of a software package</rdfs:comment>
     <rdfs:subClassOf rdf:resource="http://purl.org/net/wicus-stack#Version"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
@@ -191,23 +191,23 @@
     <dc:creator xml:lang="es">Hernán Vargas</dc:creator>
   </rdf:Description>
   <rdf:Description rdf:about="http://dockerpedia.inf.utfsm.cl/vocab#fixVulnerability">
-    <rdfs:label xml:lang="en">a security revision fixes a vulnerability</rdfs:label>
+    <rdfs:comment xml:lang="en">a security revision fixes a vulnerability</rdfs:comment>
     <rdfs:range rdf:resource="http://dockerpedia.inf.utfsm.cl/vocab#SoftwareVulnerability"/>
     <rdfs:domain rdf:resource="http://dockerpedia.inf.utfsm.cl/vocab#SecurityRevision"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://dockerpedia.inf.utfsm.cl/vocab#SecurityRevision">
-    <rdfs:label xml:lang="en">security revision of a software package</rdfs:label>
+    <rdfs:comment xml:lang="en">security revision of a software package</rdfs:comment>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://dockerpedia.inf.utfsm.cl/vocab#fixPackageVersion">
-    <rdfs:label xml:lang="en">a security revision fixes a package version</rdfs:label>
+    <rdfs:comment xml:lang="en">a security revision fixes a package version</rdfs:comment>
     <rdfs:range rdf:resource="http://dockerpedia.inf.utfsm.cl/vocab#PackageVersion"/>
     <rdfs:domain rdf:resource="http://dockerpedia.inf.utfsm.cl/vocab#SecurityRevision"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://dockerpedia.inf.utfsm.cl/vocab#composedBy">
-    <rdfs:label xml:lang="en">One Software image may be composed of several layers</rdfs:label>
+    <rdfs:comment xml:lang="en">One Software image may be composed of several layers</rdfs:comment>
     <rdfs:range rdf:resource="http://dockerpedia.inf.utfsm.cl/vocab#ImageLayer"/>
     <rdfs:domain rdf:resource="http://dockerpedia.inf.utfsm.cl/vocab#SoftwareImage"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
