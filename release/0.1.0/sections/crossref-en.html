@@ -1,46 +1,64 @@
-<html><h2 id="crossreference" class="list">Cross reference for The DockerPedia Ontology classes, properties and dataproperties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<h2 id="crossreference" class="list">Cross reference for The DockerPedia Ontology classes, properties and dataproperties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 This section provides details for each class and property defined by The DockerPedia Ontology.
-<div id="classes">
+<div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
    <h3 id="classes-headline" class="list">Classes</h3>
    <ul class="hlist">
       <li>
-         <a href="#DockerFile" title="http://dockerpedia.inf.utfsm.cl/vocab#DockerFile">
-            <span>docker file</span>
-         </a>
+         <a href="#DockerFile" title="http://dockerpedia.inf.utfsm.cl/vocab#DockerFile">A file containing the instructions required to build an image (docker:SoftwareImage) in the Docker framework</a>
+      </li>
+      <li>
+         <a href="#ImageLayer" title="http://dockerpedia.inf.utfsm.cl/vocab#ImageLayer">A layer of a Docker image are a set files generated from running a command from a DockerFile.</a>
+      </li>
+      <li>
+         <a href="#SoftwareVulnerability"
+            title="http://dockerpedia.inf.utfsm.cl/vocab#SoftwareVulnerability">a mistake in a software component that leaves it open to exploitation by an adversary</a>
+      </li>
+      <li>
+         <a href="#LayerModification"
+            title="http://dockerpedia.inf.utfsm.cl/vocab#LayerModification">A modification of a layer in a DockerFile</a>
+      </li>
+      <li>
+         <a href="#http://purl.org/dc/elements/1.1/identifier" title="http://purl.org/dc/elements/1.1/identifier">A name that identifies either a unique object or a unique class of objects.</a>
+      </li>
+      <li>
+         <a href="#SoftwareImage"
+            title="http://dockerpedia.inf.utfsm.cl/vocab#SoftwareImage">A read-only template that contains a set of instructions for creating a container.</a>
+      </li>
+      <li>
+         <a href="#Image" title="http://dockerpedia.inf.utfsm.cl/vocab#Image">A serialized copy of the state of a software stored in some non-volatile form such as a file.</a>
+      </li>
+      <li>
+         <a href="#OperatingSystem"
+            title="http://dockerpedia.inf.utfsm.cl/vocab#OperatingSystem">A software operating system repersentation</a>
       </li>
       <li>
          <a href="#imageIdentifier"
             title="http://dockerpedia.inf.utfsm.cl/vocab#imageIdentifier">
-            <span>image identifier</span>
+            <span>An identifier of a software image</span>
          </a>
       </li>
       <li>
-         <a href="#ImageVersion"
-            title="http://dockerpedia.inf.utfsm.cl/vocab#ImageVersion">
-            <span>image version</span>
-         </a>
-      </li>
-      <li>
-         <a href="#PackageVersion"
-            title="http://dockerpedia.inf.utfsm.cl/vocab#PackageVersion">
-            <span>package version</span>
-         </a>
-      </li>
-      <li>
-         <a href="#SoftwareImage"
-            title="http://dockerpedia.inf.utfsm.cl/vocab#SoftwareImage">
-            <span>software image</span>
-         </a>
+         <a href="#SecurityRevision"
+            title="http://dockerpedia.inf.utfsm.cl/vocab#SecurityRevision">security revision of a software package</a>
       </li>
       <li>
          <a href="#SoftwarePackage"
-            title="http://dockerpedia.inf.utfsm.cl/vocab#SoftwarePackage">
-            <span>software package</span>
-         </a>
+            title="http://dockerpedia.inf.utfsm.cl/vocab#SoftwarePackage">Set of individual software files or resources that are packed together as a software collection that provides certain functionality as part of a larger system.</a>
+      </li>
+      <li>
+         <a href="#FileSystem" title="http://dockerpedia.inf.utfsm.cl/vocab#FileSystem">The way in which files are named and where they are placed logically for storage and retrieval.</a>
+      </li>
+      <li>
+         <a href="#ImageVersion"
+            title="http://dockerpedia.inf.utfsm.cl/vocab#ImageVersion">version of a software image</a>
+      </li>
+      <li>
+         <a href="#PackageVersion"
+            title="http://dockerpedia.inf.utfsm.cl/vocab#PackageVersion">Version of a software package</a>
       </li>
    </ul>
    <div class="entity" id="DockerFile">
-      <h3>docker file<sup class="type-c" title="class">c</sup>
+      <h3>A file containing the instructions required to build an image (docker:SoftwareImage) in the Docker framework<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
@@ -49,85 +67,95 @@ This section provides details for each class and property defined by The DockerP
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <span class="dotted" title="http://purl.org/net/wicus-stack#DeploymentScript">deployment script</span>
+            <a href="http://purl.org/net/wicus-stack#DeploymentScript"
+               target="_blank"
+               title="http://purl.org/net/wicus-stack#DeploymentScript">deployment script</a>
          </dd>
          <dt>is in domain of</dt>
          <dd>
-            <a href="#builds" title="http://dockerpedia.inf.utfsm.cl/vocab#builds">builds</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#hasImage" title="http://dockerpedia.inf.utfsm.cl/vocab#hasImage">has image</a>
+            <a href="#builds" title="http://dockerpedia.inf.utfsm.cl/vocab#builds">A DockerFile builds a SoftwareImage since the DockerFile is a description of that image</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasImage" title="http://dockerpedia.inf.utfsm.cl/vocab#hasImage">A docker file has software images</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
    </div>
-   <div class="entity" id="imageIdentifier">
-      <h3>image identifier<sup class="type-c" title="class">c</sup>
+   <div class="entity" id="ImageLayer">
+      <h3>A layer of a Docker image are a set files generated from running a command from a DockerFile.<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://dockerpedia.inf.utfsm.cl/vocab#imageIdentifier</p>
+         <strong>IRI:</strong> http://dockerpedia.inf.utfsm.cl/vocab#ImageLayer</p>
       <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <span class="dotted" title="http://purl.org/dc/elements/1.1/identifier">identifier</span>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dt>is also defined as</dt>
-         <dd>
-            <a href="#imageIdentifier">object property</a>, <a href="#imageIdentifier">data property</a>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="ImageVersion">
-      <h3>image version<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://dockerpedia.inf.utfsm.cl/vocab#ImageVersion</p>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <span class="dotted" title="http://purl.org/net/wicus-stack#Version">version</span>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="PackageVersion">
-      <h3>package version<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://dockerpedia.inf.utfsm.cl/vocab#PackageVersion</p>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <span class="dotted" title="http://purl.org/net/wicus-stack#Version">version</span>
-         </dd>
          <dt>is in domain of</dt>
          <dd>
-            <a href="#hasRevision"
-               title="http://dockerpedia.inf.utfsm.cl/vocab#hasRevision">has revision</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#hasVulnerability"
-               title="http://dockerpedia.inf.utfsm.cl/vocab#hasVulnerability">has vulnerability</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#isVersionOf"
-               title="http://dockerpedia.inf.utfsm.cl/vocab#isVersionOf">is version of</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#modifyLayer"
-               title="http://dockerpedia.inf.utfsm.cl/vocab#modifyLayer">modify layer</a>
+            <a href="#usesOS" title="http://dockerpedia.inf.utfsm.cl/vocab#usesOS">a software layer use an Operating System</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#isModifiedBy"
+               title="http://dockerpedia.inf.utfsm.cl/vocab#isModifiedBy">an image layer modifies a package version</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#isLayerOf" title="http://dockerpedia.inf.utfsm.cl/vocab#isLayerOf">one software layer is part of a software image</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
          <dt>is in range of</dt>
          <dd>
-            <a href="#fixPackageVersion"
-               title="http://dockerpedia.inf.utfsm.cl/vocab#fixPackageVersion">fix package version</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#isModifiedBy"
-               title="http://dockerpedia.inf.utfsm.cl/vocab#isModifiedBy">is modified by</a>
+            <a href="#composedBy" title="http://dockerpedia.inf.utfsm.cl/vocab#composedBy">One Software image may be composed of several layers</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#modifyLayer"
+               title="http://dockerpedia.inf.utfsm.cl/vocab#modifyLayer">a package version modifies a layer</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasLayer" title="http://dockerpedia.inf.utfsm.cl/vocab#hasLayer">one software images may be composed of several layers</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
    </div>
+   <div class="entity" id="SoftwareVulnerability">
+      <h3>a mistake in a software component that leaves it open to exploitation by an adversary<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://dockerpedia.inf.utfsm.cl/vocab#SoftwareVulnerability</p>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#affectsOS" title="http://dockerpedia.inf.utfsm.cl/vocab#affectsOS">a vulnerability that is present in an operating system</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasVulnerability"
+               title="http://dockerpedia.inf.utfsm.cl/vocab#hasVulnerability">One package version may have one or more software vulnerabilities</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#isAffectedBy"
+               title="http://dockerpedia.inf.utfsm.cl/vocab#isAffectedBy">Operating Systems are affected by software vulnerabilities</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#fixVulnerability"
+               title="http://dockerpedia.inf.utfsm.cl/vocab#fixVulnerability">a security revision fixes a vulnerability</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="LayerModification">
+      <h3>A modification of a layer in a DockerFile<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://dockerpedia.inf.utfsm.cl/vocab#LayerModification</p>
+   </div>
+   <div class="entity" id="http://purl.org/dc/elements/1.1/identifier">
+      <h3>A name that identifies either a unique object or a unique class of objects.<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/dc/elements/1.1/identifier</p>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#imageIdentifier"
+               title="http://dockerpedia.inf.utfsm.cl/vocab#imageIdentifier">An identifier of a software image</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="SoftwareImage">
-      <h3>software image<sup class="type-c" title="class">c</sup>
+      <h3>A read-only template that contains a set of instructions for creating a container.<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
@@ -136,27 +164,127 @@ This section provides details for each class and property defined by The DockerP
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <span class="dotted" title="http://dockerpedia.inf.utfsm.cl/vocab#Image">image</span>
+            <a href="#Image" title="http://dockerpedia.inf.utfsm.cl/vocab#Image">A serialized copy of the state of a software stored in some non-volatile form such as a file.</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>is in domain of</dt>
          <dd>
-            <a href="#composedBy" title="http://dockerpedia.inf.utfsm.cl/vocab#composedBy">composed by</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#hasLayer" title="http://dockerpedia.inf.utfsm.cl/vocab#hasLayer">has layer</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#imageIdentifier"
-               title="http://dockerpedia.inf.utfsm.cl/vocab#imageIdentifier">image identifier</a>
+            <a href="#imageIdentifier"
+               title="http://dockerpedia.inf.utfsm.cl/vocab#imageIdentifier">An identifier of a software image</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#composedBy" title="http://dockerpedia.inf.utfsm.cl/vocab#composedBy">One Software image may be composed of several layers</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#containPackages"
+               title="http://dockerpedia.inf.utfsm.cl/vocab#containPackages">a software image contains several packages</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasLayer" title="http://dockerpedia.inf.utfsm.cl/vocab#hasLayer">one software images may be composed of several layers</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
          <dt>is in range of</dt>
          <dd>
-            <a href="#builds" title="http://dockerpedia.inf.utfsm.cl/vocab#builds">builds</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#hasImage" title="http://dockerpedia.inf.utfsm.cl/vocab#hasImage">has image</a>
+            <a href="#builds" title="http://dockerpedia.inf.utfsm.cl/vocab#builds">A DockerFile builds a SoftwareImage since the DockerFile is a description of that image</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasImage" title="http://dockerpedia.inf.utfsm.cl/vocab#hasImage">A docker file has software images</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Image">
+      <h3>A serialized copy of the state of a software stored in some non-volatile form such as a file.<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://dockerpedia.inf.utfsm.cl/vocab#Image</p>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#SoftwareImage"
+               title="http://dockerpedia.inf.utfsm.cl/vocab#SoftwareImage">A read-only template that contains a set of instructions for creating a container.</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#isLayerOf" title="http://dockerpedia.inf.utfsm.cl/vocab#isLayerOf">one software layer is part of a software image</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="OperatingSystem">
+      <h3>A software operating system repersentation<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://dockerpedia.inf.utfsm.cl/vocab#OperatingSystem</p>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#hasFileSystem"
+               title="http://dockerpedia.inf.utfsm.cl/vocab#hasFileSystem">An OS has a file system in which install software</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#isAffectedBy"
+               title="http://dockerpedia.inf.utfsm.cl/vocab#isAffectedBy">Operating Systems are affected by software vulnerabilities</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasPackages"
+               title="http://dockerpedia.inf.utfsm.cl/vocab#hasPackages">one OS may have installed several software packages on it</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#usesOS" title="http://dockerpedia.inf.utfsm.cl/vocab#usesOS">a software layer use an Operating System</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#affectsOS" title="http://dockerpedia.inf.utfsm.cl/vocab#affectsOS">a vulnerability that is present in an operating system</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#isPackageOf"
+               title="http://dockerpedia.inf.utfsm.cl/vocab#isPackageOf">software components are package on an Operating System</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="imageIdentifier">
+      <h3>An identifier of a software image<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://dockerpedia.inf.utfsm.cl/vocab#imageIdentifier</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://purl.org/dc/elements/1.1/identifier" title="http://purl.org/dc/elements/1.1/identifier">A name that identifies either a unique object or a unique class of objects.</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#imageIdentifier"
+               title="http://dockerpedia.inf.utfsm.cl/vocab#imageIdentifier">An identifier of a software image</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is also defined as</dt>
+         <dd>
+            <a href="#imageIdentifier">object property</a>, <a href="#imageIdentifier">data property</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SecurityRevision">
+      <h3>security revision of a software package<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://dockerpedia.inf.utfsm.cl/vocab#SecurityRevision</p>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#fixPackageVersion"
+               title="http://dockerpedia.inf.utfsm.cl/vocab#fixPackageVersion">a security revision fixes a package version</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#fixVulnerability"
+               title="http://dockerpedia.inf.utfsm.cl/vocab#fixVulnerability">a security revision fixes a vulnerability</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasRevision"
+               title="http://dockerpedia.inf.utfsm.cl/vocab#hasRevision">one package version may have a security revision fixing some vulnerability</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
    </div>
    <div class="entity" id="SoftwarePackage">
-      <h3>software package<sup class="type-c" title="class">c</sup>
+      <h3>Set of individual software files or resources that are packed together as a software collection that provides certain functionality as part of a larger system.<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
@@ -165,304 +293,178 @@ This section provides details for each class and property defined by The DockerP
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <span class="dotted"
-                  title="http://purl.org/net/wicus-stack#SoftwareComponent">software component</span>
+            <a href="http://purl.org/net/wicus-stack#SoftwareComponent"
+               target="_blank"
+               title="http://purl.org/net/wicus-stack#SoftwareComponent">software component</a>
          </dd>
          <dt>is in domain of</dt>
          <dd>
-            <a href="#deployedOn" title="http://dockerpedia.inf.utfsm.cl/vocab#deployedOn">deployed on</a>
+            <a href="#deployedOn" title="http://dockerpedia.inf.utfsm.cl/vocab#deployedOn">software images deploy on FileSystems</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
          <dt>is in range of</dt>
          <dd>
-            <a href="#hasPackages"
-               title="http://dockerpedia.inf.utfsm.cl/vocab#hasPackages">has packages</a>
+            <a href="#containPackages"
+               title="http://dockerpedia.inf.utfsm.cl/vocab#containPackages">a software image contains several packages</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasPackages"
+               title="http://dockerpedia.inf.utfsm.cl/vocab#hasPackages">one OS may have installed several software packages on it</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
    </div>
-</div><div id="objectproperties">
+   <div class="entity" id="FileSystem">
+      <h3>The way in which files are named and where they are placed logically for storage and retrieval.<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://dockerpedia.inf.utfsm.cl/vocab#FileSystem</p>
+      <dl class="description">
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasFileSystem"
+               title="http://dockerpedia.inf.utfsm.cl/vocab#hasFileSystem">An OS has a file system in which install software</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#deployedOn" title="http://dockerpedia.inf.utfsm.cl/vocab#deployedOn">software images deploy on FileSystems</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ImageVersion">
+      <h3>version of a software image<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://dockerpedia.inf.utfsm.cl/vocab#ImageVersion</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://purl.org/net/wicus-stack#Version"
+               target="_blank"
+               title="http://purl.org/net/wicus-stack#Version">version</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="PackageVersion">
+      <h3>Version of a software package<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://dockerpedia.inf.utfsm.cl/vocab#PackageVersion</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://purl.org/net/wicus-stack#Version"
+               target="_blank"
+               title="http://purl.org/net/wicus-stack#Version">version</a>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#hasVulnerability"
+               title="http://dockerpedia.inf.utfsm.cl/vocab#hasVulnerability">One package version may have one or more software vulnerabilities</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#isVersionOf"
+               title="http://dockerpedia.inf.utfsm.cl/vocab#isVersionOf">a package version is a versuon of a software component</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#modifyLayer"
+               title="http://dockerpedia.inf.utfsm.cl/vocab#modifyLayer">a package version modifies a layer</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasRevision"
+               title="http://dockerpedia.inf.utfsm.cl/vocab#hasRevision">one package version may have a security revision fixing some vulnerability</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#fixPackageVersion"
+               title="http://dockerpedia.inf.utfsm.cl/vocab#fixPackageVersion">a security revision fixes a package version</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#isModifiedBy"
+               title="http://dockerpedia.inf.utfsm.cl/vocab#isModifiedBy">an image layer modifies a package version</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
    <h3 id="properties" class="list">Object Properties</h3>
    <ul class="hlist">
       <li>
-         <a href="#affectsOS" title="http://dockerpedia.inf.utfsm.cl/vocab#affectsOS">
-            <span>affects o s</span>
-         </a>
+         <a href="#hasImage" title="http://dockerpedia.inf.utfsm.cl/vocab#hasImage">A docker file has software images</a>
       </li>
       <li>
-         <a href="#builds" title="http://dockerpedia.inf.utfsm.cl/vocab#builds">
-            <span>builds</span>
-         </a>
+         <a href="#builds" title="http://dockerpedia.inf.utfsm.cl/vocab#builds">A DockerFile builds a SoftwareImage since the DockerFile is a description of that image</a>
       </li>
       <li>
-         <a href="#composedBy" title="http://dockerpedia.inf.utfsm.cl/vocab#composedBy">
-            <span>composed by</span>
-         </a>
+         <a href="#isVersionOf"
+            title="http://dockerpedia.inf.utfsm.cl/vocab#isVersionOf">a package version is a versuon of a software component</a>
       </li>
       <li>
-         <a href="#deployedOn" title="http://dockerpedia.inf.utfsm.cl/vocab#deployedOn">
-            <span>deployed on</span>
-         </a>
+         <a href="#modifyLayer"
+            title="http://dockerpedia.inf.utfsm.cl/vocab#modifyLayer">a package version modifies a layer</a>
       </li>
       <li>
          <a href="#fixPackageVersion"
-            title="http://dockerpedia.inf.utfsm.cl/vocab#fixPackageVersion">
-            <span>fix package version</span>
-         </a>
+            title="http://dockerpedia.inf.utfsm.cl/vocab#fixPackageVersion">a security revision fixes a package version</a>
       </li>
       <li>
          <a href="#fixVulnerability"
-            title="http://dockerpedia.inf.utfsm.cl/vocab#fixVulnerability">
-            <span>fix vulnerability</span>
-         </a>
+            title="http://dockerpedia.inf.utfsm.cl/vocab#fixVulnerability">a security revision fixes a vulnerability</a>
       </li>
       <li>
-         <a href="#hasFileSystem"
-            title="http://dockerpedia.inf.utfsm.cl/vocab#hasFileSystem">
-            <span>has file system</span>
-         </a>
+         <a href="#containPackages"
+            title="http://dockerpedia.inf.utfsm.cl/vocab#containPackages">a software image contains several packages</a>
       </li>
       <li>
-         <a href="#hasImage" title="http://dockerpedia.inf.utfsm.cl/vocab#hasImage">
-            <span>has image</span>
-         </a>
+         <a href="#usesOS" title="http://dockerpedia.inf.utfsm.cl/vocab#usesOS">a software layer use an Operating System</a>
       </li>
       <li>
-         <a href="#hasLayer" title="http://dockerpedia.inf.utfsm.cl/vocab#hasLayer">
-            <span>has layer</span>
-         </a>
-      </li>
-      <li>
-         <a href="#hasPackages"
-            title="http://dockerpedia.inf.utfsm.cl/vocab#hasPackages">
-            <span>has packages</span>
-         </a>
-      </li>
-      <li>
-         <a href="#hasRevision"
-            title="http://dockerpedia.inf.utfsm.cl/vocab#hasRevision">
-            <span>has revision</span>
-         </a>
-      </li>
-      <li>
-         <a href="#hasVulnerability"
-            title="http://dockerpedia.inf.utfsm.cl/vocab#hasVulnerability">
-            <span>has vulnerability</span>
-         </a>
+         <a href="#affectsOS" title="http://dockerpedia.inf.utfsm.cl/vocab#affectsOS">a vulnerability that is present in an operating system</a>
       </li>
       <li>
          <a href="#imageIdentifier"
             title="http://dockerpedia.inf.utfsm.cl/vocab#imageIdentifier">
-            <span>image identifier</span>
-         </a>
-      </li>
-      <li>
-         <a href="#isAffectedBy"
-            title="http://dockerpedia.inf.utfsm.cl/vocab#isAffectedBy">
-            <span>is affected by</span>
-         </a>
-      </li>
-      <li>
-         <a href="#isLayerOf" title="http://dockerpedia.inf.utfsm.cl/vocab#isLayerOf">
-            <span>is layer of</span>
+            <span>An identifier of a software image</span>
          </a>
       </li>
       <li>
          <a href="#isModifiedBy"
-            title="http://dockerpedia.inf.utfsm.cl/vocab#isModifiedBy">
-            <span>is modified by</span>
-         </a>
+            title="http://dockerpedia.inf.utfsm.cl/vocab#isModifiedBy">an image layer modifies a package version</a>
+      </li>
+      <li>
+         <a href="#hasFileSystem"
+            title="http://dockerpedia.inf.utfsm.cl/vocab#hasFileSystem">An OS has a file system in which install software</a>
+      </li>
+      <li>
+         <a href="#hasPackages"
+            title="http://dockerpedia.inf.utfsm.cl/vocab#hasPackages">one OS may have installed several software packages on it</a>
+      </li>
+      <li>
+         <a href="#hasRevision"
+            title="http://dockerpedia.inf.utfsm.cl/vocab#hasRevision">one package version may have a security revision fixing some vulnerability</a>
+      </li>
+      <li>
+         <a href="#hasVulnerability"
+            title="http://dockerpedia.inf.utfsm.cl/vocab#hasVulnerability">One package version may have one or more software vulnerabilities</a>
+      </li>
+      <li>
+         <a href="#composedBy" title="http://dockerpedia.inf.utfsm.cl/vocab#composedBy">One Software image may be composed of several layers</a>
+      </li>
+      <li>
+         <a href="#hasLayer" title="http://dockerpedia.inf.utfsm.cl/vocab#hasLayer">one software images may be composed of several layers</a>
+      </li>
+      <li>
+         <a href="#isLayerOf" title="http://dockerpedia.inf.utfsm.cl/vocab#isLayerOf">one software layer is part of a software image</a>
+      </li>
+      <li>
+         <a href="#isAffectedBy"
+            title="http://dockerpedia.inf.utfsm.cl/vocab#isAffectedBy">Operating Systems are affected by software vulnerabilities</a>
       </li>
       <li>
          <a href="#isPackageOf"
-            title="http://dockerpedia.inf.utfsm.cl/vocab#isPackageOf">
-            <span>is package of</span>
-         </a>
+            title="http://dockerpedia.inf.utfsm.cl/vocab#isPackageOf">software components are package on an Operating System</a>
       </li>
       <li>
-         <a href="#isVersionOf"
-            title="http://dockerpedia.inf.utfsm.cl/vocab#isVersionOf">
-            <span>is version of</span>
-         </a>
-      </li>
-      <li>
-         <a href="#modifyLayer"
-            title="http://dockerpedia.inf.utfsm.cl/vocab#modifyLayer">
-            <span>modify layer</span>
-         </a>
-      </li>
-      <li>
-         <a href="#usesOS" title="http://dockerpedia.inf.utfsm.cl/vocab#usesOS">
-            <span>uses o s</span>
-         </a>
+         <a href="#deployedOn" title="http://dockerpedia.inf.utfsm.cl/vocab#deployedOn">software images deploy on FileSystems</a>
       </li>
    </ul>
-   <div class="entity" id="affectsOS">
-      <h3>affects o s<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://dockerpedia.inf.utfsm.cl/vocab#affectsOS</p>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <span class="dotted"
-                     title="http://dockerpedia.inf.utfsm.cl/vocab#SoftwareVulnerability">software vulnerability</span>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <span class="dotted"
-                     title="http://dockerpedia.inf.utfsm.cl/vocab#OperatingSystem">operating system</span>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="builds">
-      <h3>builds<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://dockerpedia.inf.utfsm.cl/vocab#builds</p>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#DockerFile" title="http://dockerpedia.inf.utfsm.cl/vocab#DockerFile">docker file</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="#SoftwareImage"
-                  title="http://dockerpedia.inf.utfsm.cl/vocab#SoftwareImage">software image</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="composedBy">
-      <h3>composed by<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://dockerpedia.inf.utfsm.cl/vocab#composedBy</p>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#SoftwareImage"
-                  title="http://dockerpedia.inf.utfsm.cl/vocab#SoftwareImage">software image</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <span class="dotted" title="http://dockerpedia.inf.utfsm.cl/vocab#ImageLayer">image layer</span>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="deployedOn">
-      <h3>deployed on<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://dockerpedia.inf.utfsm.cl/vocab#deployedOn</p>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#SoftwarePackage"
-                  title="http://dockerpedia.inf.utfsm.cl/vocab#SoftwarePackage">software package</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <span class="dotted" title="http://dockerpedia.inf.utfsm.cl/vocab#FileSystem">file system</span>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="fixPackageVersion">
-      <h3>fix package version<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://dockerpedia.inf.utfsm.cl/vocab#fixPackageVersion</p>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <span class="dotted"
-                     title="http://dockerpedia.inf.utfsm.cl/vocab#SecurityRevision">security revision</span>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="#PackageVersion"
-                  title="http://dockerpedia.inf.utfsm.cl/vocab#PackageVersion">package version</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="fixVulnerability">
-      <h3>fix vulnerability<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://dockerpedia.inf.utfsm.cl/vocab#fixVulnerability</p>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <span class="dotted"
-                     title="http://dockerpedia.inf.utfsm.cl/vocab#SecurityRevision">security revision</span>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <span class="dotted"
-                     title="http://dockerpedia.inf.utfsm.cl/vocab#SoftwareVulnerability">software vulnerability</span>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="hasFileSystem">
-      <h3>has file system<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://dockerpedia.inf.utfsm.cl/vocab#hasFileSystem</p>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <span class="dotted"
-                     title="http://dockerpedia.inf.utfsm.cl/vocab#OperatingSystem">operating system</span>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <span class="dotted" title="http://dockerpedia.inf.utfsm.cl/vocab#FileSystem">file system</span>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
    <div class="entity" id="hasImage">
-      <h3>has image<sup class="type-op" title="object property">op</sup>
+      <h3>A docker file has software images<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
@@ -472,229 +474,43 @@ This section provides details for each class and property defined by The DockerP
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#DockerFile" title="http://dockerpedia.inf.utfsm.cl/vocab#DockerFile">docker file</a>
+               <a href="#DockerFile" title="http://dockerpedia.inf.utfsm.cl/vocab#DockerFile">A file containing the instructions required to build an image (docker:SoftwareImage) in the Docker framework</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
             <dd>
                <a href="#SoftwareImage"
-                  title="http://dockerpedia.inf.utfsm.cl/vocab#SoftwareImage">software image</a>
+                  title="http://dockerpedia.inf.utfsm.cl/vocab#SoftwareImage">A read-only template that contains a set of instructions for creating a container.</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
       </div>
    </div>
-   <div class="entity" id="hasLayer">
-      <h3>has layer<sup class="type-op" title="object property">op</sup>
+   <div class="entity" id="builds">
+      <h3>A DockerFile builds a SoftwareImage since the DockerFile is a description of that image<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://dockerpedia.inf.utfsm.cl/vocab#hasLayer</p>
+         <strong>IRI:</strong> http://dockerpedia.inf.utfsm.cl/vocab#builds</p>
       <div class="description">
          <dl>
             <dt>has domain</dt>
+            <dd>
+               <a href="#DockerFile" title="http://dockerpedia.inf.utfsm.cl/vocab#DockerFile">A file containing the instructions required to build an image (docker:SoftwareImage) in the Docker framework</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
             <dd>
                <a href="#SoftwareImage"
-                  title="http://dockerpedia.inf.utfsm.cl/vocab#SoftwareImage">software image</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <span class="dotted" title="http://dockerpedia.inf.utfsm.cl/vocab#ImageLayer">image layer</span>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="hasPackages">
-      <h3>has packages<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://dockerpedia.inf.utfsm.cl/vocab#hasPackages</p>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <span class="dotted"
-                     title="http://dockerpedia.inf.utfsm.cl/vocab#OperatingSystem">operating system</span>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="#SoftwarePackage"
-                  title="http://dockerpedia.inf.utfsm.cl/vocab#SoftwarePackage">software package</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="hasRevision">
-      <h3>has revision<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://dockerpedia.inf.utfsm.cl/vocab#hasRevision</p>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#PackageVersion"
-                  title="http://dockerpedia.inf.utfsm.cl/vocab#PackageVersion">package version</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <span class="dotted"
-                     title="http://dockerpedia.inf.utfsm.cl/vocab#SecurityRevision">security revision</span>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="hasVulnerability">
-      <h3>has vulnerability<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://dockerpedia.inf.utfsm.cl/vocab#hasVulnerability</p>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#PackageVersion"
-                  title="http://dockerpedia.inf.utfsm.cl/vocab#PackageVersion">package version</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <span class="dotted"
-                     title="http://dockerpedia.inf.utfsm.cl/vocab#SoftwareVulnerability">software vulnerability</span>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="imageIdentifier">
-      <h3>image identifier<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://dockerpedia.inf.utfsm.cl/vocab#imageIdentifier</p>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#SoftwareImage"
-                  title="http://dockerpedia.inf.utfsm.cl/vocab#SoftwareImage">software image</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>is also defined as</dt>
-            <dd>
-               <a href="#imageIdentifier">data property</a>, <a href="#imageIdentifier">class</a>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="isAffectedBy">
-      <h3>is affected by<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://dockerpedia.inf.utfsm.cl/vocab#isAffectedBy</p>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <span class="dotted"
-                     title="http://dockerpedia.inf.utfsm.cl/vocab#OperatingSystem">operating system</span>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <span class="dotted"
-                     title="http://dockerpedia.inf.utfsm.cl/vocab#SoftwareVulnerability">software vulnerability</span>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="isLayerOf">
-      <h3>is layer of<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://dockerpedia.inf.utfsm.cl/vocab#isLayerOf</p>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <span class="dotted" title="http://dockerpedia.inf.utfsm.cl/vocab#ImageLayer">image layer</span>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <span class="dotted" title="http://dockerpedia.inf.utfsm.cl/vocab#Image">image</span>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="isModifiedBy">
-      <h3>is modified by<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://dockerpedia.inf.utfsm.cl/vocab#isModifiedBy</p>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <span class="dotted" title="http://dockerpedia.inf.utfsm.cl/vocab#ImageLayer">image layer</span>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="#PackageVersion"
-                  title="http://dockerpedia.inf.utfsm.cl/vocab#PackageVersion">package version</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="isPackageOf">
-      <h3>is package of<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://dockerpedia.inf.utfsm.cl/vocab#isPackageOf</p>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <span class="dotted"
-                     title="http://purl.org/net/wicus-stack#SoftwareComponent">software component</span>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <span class="dotted"
-                     title="http://dockerpedia.inf.utfsm.cl/vocab#OperatingSystem">operating system</span>
+                  title="http://dockerpedia.inf.utfsm.cl/vocab#SoftwareImage">A read-only template that contains a set of instructions for creating a container.</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
       </div>
    </div>
    <div class="entity" id="isVersionOf">
-      <h3>is version of<sup class="type-op" title="object property">op</sup>
+      <h3>a package version is a versuon of a software component<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
@@ -705,19 +521,20 @@ This section provides details for each class and property defined by The DockerP
             <dt>has domain</dt>
             <dd>
                <a href="#PackageVersion"
-                  title="http://dockerpedia.inf.utfsm.cl/vocab#PackageVersion">package version</a>
+                  title="http://dockerpedia.inf.utfsm.cl/vocab#PackageVersion">Version of a software package</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted"
-                     title="http://purl.org/net/wicus-stack#SoftwareComponent">software component</span>
+               <a href="http://purl.org/net/wicus-stack#SoftwareComponent"
+                  target="_blank"
+                  title="http://purl.org/net/wicus-stack#SoftwareComponent">software component</a>
             </dd>
          </dl>
       </div>
    </div>
    <div class="entity" id="modifyLayer">
-      <h3>modify layer<sup class="type-op" title="object property">op</sup>
+      <h3>a package version modifies a layer<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
@@ -728,19 +545,91 @@ This section provides details for each class and property defined by The DockerP
             <dt>has domain</dt>
             <dd>
                <a href="#PackageVersion"
-                  title="http://dockerpedia.inf.utfsm.cl/vocab#PackageVersion">package version</a>
+                  title="http://dockerpedia.inf.utfsm.cl/vocab#PackageVersion">Version of a software package</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://dockerpedia.inf.utfsm.cl/vocab#ImageLayer">image layer</span>
+               <a href="#ImageLayer" title="http://dockerpedia.inf.utfsm.cl/vocab#ImageLayer">A layer of a Docker image are a set files generated from running a command from a DockerFile.</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="fixPackageVersion">
+      <h3>a security revision fixes a package version<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://dockerpedia.inf.utfsm.cl/vocab#fixPackageVersion</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#SecurityRevision"
+                  title="http://dockerpedia.inf.utfsm.cl/vocab#SecurityRevision">security revision of a software package</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#PackageVersion"
+                  title="http://dockerpedia.inf.utfsm.cl/vocab#PackageVersion">Version of a software package</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="fixVulnerability">
+      <h3>a security revision fixes a vulnerability<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://dockerpedia.inf.utfsm.cl/vocab#fixVulnerability</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#SecurityRevision"
+                  title="http://dockerpedia.inf.utfsm.cl/vocab#SecurityRevision">security revision of a software package</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#SoftwareVulnerability"
+                  title="http://dockerpedia.inf.utfsm.cl/vocab#SoftwareVulnerability">a mistake in a software component that leaves it open to exploitation by an adversary</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="containPackages">
+      <h3>a software image contains several packages<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://dockerpedia.inf.utfsm.cl/vocab#containPackages</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#SoftwareImage"
+                  title="http://dockerpedia.inf.utfsm.cl/vocab#SoftwareImage">A read-only template that contains a set of instructions for creating a container.</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#SoftwarePackage"
+                  title="http://dockerpedia.inf.utfsm.cl/vocab#SoftwarePackage">Set of individual software files or resources that are packed together as a software collection that provides certain functionality as part of a larger system.</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
       </div>
    </div>
    <div class="entity" id="usesOS">
-      <h3>uses o s<sup class="type-op" title="object property">op</sup>
+      <h3>a software layer use an Operating System<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
@@ -750,30 +639,339 @@ This section provides details for each class and property defined by The DockerP
          <dl>
             <dt>has domain</dt>
             <dd>
-               <span class="dotted" title="http://dockerpedia.inf.utfsm.cl/vocab#ImageLayer">image layer</span>
+               <a href="#ImageLayer" title="http://dockerpedia.inf.utfsm.cl/vocab#ImageLayer">A layer of a Docker image are a set files generated from running a command from a DockerFile.</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted"
-                     title="http://dockerpedia.inf.utfsm.cl/vocab#OperatingSystem">operating system</span>
+               <a href="#OperatingSystem"
+                  title="http://dockerpedia.inf.utfsm.cl/vocab#OperatingSystem">A software operating system repersentation</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
       </div>
    </div>
-</div><div id="dataproperties">
+   <div class="entity" id="affectsOS">
+      <h3>a vulnerability that is present in an operating system<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://dockerpedia.inf.utfsm.cl/vocab#affectsOS</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#SoftwareVulnerability"
+                  title="http://dockerpedia.inf.utfsm.cl/vocab#SoftwareVulnerability">a mistake in a software component that leaves it open to exploitation by an adversary</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#OperatingSystem"
+                  title="http://dockerpedia.inf.utfsm.cl/vocab#OperatingSystem">A software operating system repersentation</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="imageIdentifier">
+      <h3>An identifier of a software image<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://dockerpedia.inf.utfsm.cl/vocab#imageIdentifier</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#SoftwareImage"
+                  title="http://dockerpedia.inf.utfsm.cl/vocab#SoftwareImage">A read-only template that contains a set of instructions for creating a container.</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#imageIdentifier"
+                  title="http://dockerpedia.inf.utfsm.cl/vocab#imageIdentifier">An identifier of a software image</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is also defined as</dt>
+            <dd>
+               <a href="#imageIdentifier">data property</a>, <a href="#imageIdentifier">class</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="isModifiedBy">
+      <h3>an image layer modifies a package version<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://dockerpedia.inf.utfsm.cl/vocab#isModifiedBy</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#ImageLayer" title="http://dockerpedia.inf.utfsm.cl/vocab#ImageLayer">A layer of a Docker image are a set files generated from running a command from a DockerFile.</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#PackageVersion"
+                  title="http://dockerpedia.inf.utfsm.cl/vocab#PackageVersion">Version of a software package</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasFileSystem">
+      <h3>An OS has a file system in which install software<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://dockerpedia.inf.utfsm.cl/vocab#hasFileSystem</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#OperatingSystem"
+                  title="http://dockerpedia.inf.utfsm.cl/vocab#OperatingSystem">A software operating system repersentation</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#FileSystem" title="http://dockerpedia.inf.utfsm.cl/vocab#FileSystem">The way in which files are named and where they are placed logically for storage and retrieval.</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasPackages">
+      <h3>one OS may have installed several software packages on it<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://dockerpedia.inf.utfsm.cl/vocab#hasPackages</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#OperatingSystem"
+                  title="http://dockerpedia.inf.utfsm.cl/vocab#OperatingSystem">A software operating system repersentation</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#SoftwarePackage"
+                  title="http://dockerpedia.inf.utfsm.cl/vocab#SoftwarePackage">Set of individual software files or resources that are packed together as a software collection that provides certain functionality as part of a larger system.</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasRevision">
+      <h3>one package version may have a security revision fixing some vulnerability<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://dockerpedia.inf.utfsm.cl/vocab#hasRevision</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#PackageVersion"
+                  title="http://dockerpedia.inf.utfsm.cl/vocab#PackageVersion">Version of a software package</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#SecurityRevision"
+                  title="http://dockerpedia.inf.utfsm.cl/vocab#SecurityRevision">security revision of a software package</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasVulnerability">
+      <h3>One package version may have one or more software vulnerabilities<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://dockerpedia.inf.utfsm.cl/vocab#hasVulnerability</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#PackageVersion"
+                  title="http://dockerpedia.inf.utfsm.cl/vocab#PackageVersion">Version of a software package</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#SoftwareVulnerability"
+                  title="http://dockerpedia.inf.utfsm.cl/vocab#SoftwareVulnerability">a mistake in a software component that leaves it open to exploitation by an adversary</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="composedBy">
+      <h3>One Software image may be composed of several layers<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://dockerpedia.inf.utfsm.cl/vocab#composedBy</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#SoftwareImage"
+                  title="http://dockerpedia.inf.utfsm.cl/vocab#SoftwareImage">A read-only template that contains a set of instructions for creating a container.</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#ImageLayer" title="http://dockerpedia.inf.utfsm.cl/vocab#ImageLayer">A layer of a Docker image are a set files generated from running a command from a DockerFile.</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasLayer">
+      <h3>one software images may be composed of several layers<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://dockerpedia.inf.utfsm.cl/vocab#hasLayer</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#SoftwareImage"
+                  title="http://dockerpedia.inf.utfsm.cl/vocab#SoftwareImage">A read-only template that contains a set of instructions for creating a container.</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#ImageLayer" title="http://dockerpedia.inf.utfsm.cl/vocab#ImageLayer">A layer of a Docker image are a set files generated from running a command from a DockerFile.</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="isLayerOf">
+      <h3>one software layer is part of a software image<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://dockerpedia.inf.utfsm.cl/vocab#isLayerOf</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#ImageLayer" title="http://dockerpedia.inf.utfsm.cl/vocab#ImageLayer">A layer of a Docker image are a set files generated from running a command from a DockerFile.</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Image" title="http://dockerpedia.inf.utfsm.cl/vocab#Image">A serialized copy of the state of a software stored in some non-volatile form such as a file.</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="isAffectedBy">
+      <h3>Operating Systems are affected by software vulnerabilities<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://dockerpedia.inf.utfsm.cl/vocab#isAffectedBy</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#OperatingSystem"
+                  title="http://dockerpedia.inf.utfsm.cl/vocab#OperatingSystem">A software operating system repersentation</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#SoftwareVulnerability"
+                  title="http://dockerpedia.inf.utfsm.cl/vocab#SoftwareVulnerability">a mistake in a software component that leaves it open to exploitation by an adversary</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="isPackageOf">
+      <h3>software components are package on an Operating System<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://dockerpedia.inf.utfsm.cl/vocab#isPackageOf</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="http://purl.org/net/wicus-stack#SoftwareComponent"
+                  target="_blank"
+                  title="http://purl.org/net/wicus-stack#SoftwareComponent">software component</a>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#OperatingSystem"
+                  title="http://dockerpedia.inf.utfsm.cl/vocab#OperatingSystem">A software operating system repersentation</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="deployedOn">
+      <h3>software images deploy on FileSystems<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://dockerpedia.inf.utfsm.cl/vocab#deployedOn</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#SoftwarePackage"
+                  title="http://dockerpedia.inf.utfsm.cl/vocab#SoftwarePackage">Set of individual software files or resources that are packed together as a software collection that provides certain functionality as part of a larger system.</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#FileSystem" title="http://dockerpedia.inf.utfsm.cl/vocab#FileSystem">The way in which files are named and where they are placed logically for storage and retrieval.</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
    <h3 id="dataproperties-headline" class="list">Data Properties</h3>
    <ul class="hlist">
       <li>
          <a href="#imageIdentifier"
             title="http://dockerpedia.inf.utfsm.cl/vocab#imageIdentifier">
-            <span>image identifier</span>
+            <span>An identifier of a software image</span>
          </a>
       </li>
    </ul>
    <div class="entity" id="imageIdentifier">
-      <h3>image identifier<sup class="type-op" title="object property">op</sup>
+      <h3>An identifier of a software image<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
          </span>
       </h3>
@@ -783,7 +981,9 @@ This section provides details for each class and property defined by The DockerP
          <dl>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
             </dd>
             <dt>is also defined as</dt>
             <dd>
@@ -801,4 +1001,3 @@ This section provides details for each class and property defined by The DockerP
 <sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals
 </div>
 </div>
-</html>

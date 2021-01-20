@@ -1,161 +1,145 @@
-<html><h2 id="overv" class="list">The DockerPedia Ontology: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<h2 id="overv" class="list">The DockerPedia Ontology: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <span class="markdown">
 This ontology has the following classes and properties.</span>
 <h4>Classes</h4>
-<ul class="hlist">
+<ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
    <li>
-      <a href="#DockerFile" title="http://dockerpedia.inf.utfsm.cl/vocab#DockerFile">
-         <span>docker file</span>
-      </a>
+      <a href="#DockerFile" title="http://dockerpedia.inf.utfsm.cl/vocab#DockerFile">A file containing the instructions required to build an image (docker:SoftwareImage) in the Docker framework</a>
    </li>
    <li>
-      <a href="#imageIdentifier"
-         title="http://dockerpedia.inf.utfsm.cl/vocab#imageIdentifier">
-         <span>image identifier</span>
-      </a>
+      <a href="#ImageLayer" title="http://dockerpedia.inf.utfsm.cl/vocab#ImageLayer">A layer of a Docker image are a set files generated from running a command from a DockerFile.</a>
    </li>
    <li>
-      <a href="#ImageVersion"
-         title="http://dockerpedia.inf.utfsm.cl/vocab#ImageVersion">
-         <span>image version</span>
-      </a>
+      <a href="#SoftwareVulnerability"
+         title="http://dockerpedia.inf.utfsm.cl/vocab#SoftwareVulnerability">a mistake in a software component that leaves it open to exploitation by an adversary</a>
    </li>
    <li>
-      <a href="#PackageVersion"
-         title="http://dockerpedia.inf.utfsm.cl/vocab#PackageVersion">
-         <span>package version</span>
-      </a>
+      <a href="#LayerModification"
+         title="http://dockerpedia.inf.utfsm.cl/vocab#LayerModification">A modification of a layer in a DockerFile</a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/elements/1.1/identifier" title="http://purl.org/dc/elements/1.1/identifier">A name that identifies either a unique object or a unique class of objects.</a>
    </li>
    <li>
       <a href="#SoftwareImage"
-         title="http://dockerpedia.inf.utfsm.cl/vocab#SoftwareImage">
-         <span>software image</span>
-      </a>
+         title="http://dockerpedia.inf.utfsm.cl/vocab#SoftwareImage">A read-only template that contains a set of instructions for creating a container.</a>
    </li>
    <li>
-      <a href="#SoftwarePackage"
-         title="http://dockerpedia.inf.utfsm.cl/vocab#SoftwarePackage">
-         <span>software package</span>
-      </a>
-   </li>
-</ul><h4>Object Properties</h4><ul class="hlist">
-   <li>
-      <a href="#affectsOS" title="http://dockerpedia.inf.utfsm.cl/vocab#affectsOS">
-         <span>affects o s</span>
-      </a>
+      <a href="#Image" title="http://dockerpedia.inf.utfsm.cl/vocab#Image">A serialized copy of the state of a software stored in some non-volatile form such as a file.</a>
    </li>
    <li>
-      <a href="#builds" title="http://dockerpedia.inf.utfsm.cl/vocab#builds">
-         <span>builds</span>
-      </a>
-   </li>
-   <li>
-      <a href="#composedBy" title="http://dockerpedia.inf.utfsm.cl/vocab#composedBy">
-         <span>composed by</span>
-      </a>
-   </li>
-   <li>
-      <a href="#deployedOn" title="http://dockerpedia.inf.utfsm.cl/vocab#deployedOn">
-         <span>deployed on</span>
-      </a>
-   </li>
-   <li>
-      <a href="#fixPackageVersion"
-         title="http://dockerpedia.inf.utfsm.cl/vocab#fixPackageVersion">
-         <span>fix package version</span>
-      </a>
-   </li>
-   <li>
-      <a href="#fixVulnerability"
-         title="http://dockerpedia.inf.utfsm.cl/vocab#fixVulnerability">
-         <span>fix vulnerability</span>
-      </a>
-   </li>
-   <li>
-      <a href="#hasFileSystem"
-         title="http://dockerpedia.inf.utfsm.cl/vocab#hasFileSystem">
-         <span>has file system</span>
-      </a>
-   </li>
-   <li>
-      <a href="#hasImage" title="http://dockerpedia.inf.utfsm.cl/vocab#hasImage">
-         <span>has image</span>
-      </a>
-   </li>
-   <li>
-      <a href="#hasLayer" title="http://dockerpedia.inf.utfsm.cl/vocab#hasLayer">
-         <span>has layer</span>
-      </a>
-   </li>
-   <li>
-      <a href="#hasPackages"
-         title="http://dockerpedia.inf.utfsm.cl/vocab#hasPackages">
-         <span>has packages</span>
-      </a>
-   </li>
-   <li>
-      <a href="#hasRevision"
-         title="http://dockerpedia.inf.utfsm.cl/vocab#hasRevision">
-         <span>has revision</span>
-      </a>
-   </li>
-   <li>
-      <a href="#hasVulnerability"
-         title="http://dockerpedia.inf.utfsm.cl/vocab#hasVulnerability">
-         <span>has vulnerability</span>
-      </a>
+      <a href="#OperatingSystem"
+         title="http://dockerpedia.inf.utfsm.cl/vocab#OperatingSystem">A software operating system repersentation</a>
    </li>
    <li>
       <a href="#imageIdentifier"
          title="http://dockerpedia.inf.utfsm.cl/vocab#imageIdentifier">
-         <span>image identifier</span>
+         <span>An identifier of a software image</span>
       </a>
    </li>
    <li>
-      <a href="#isAffectedBy"
-         title="http://dockerpedia.inf.utfsm.cl/vocab#isAffectedBy">
-         <span>is affected by</span>
-      </a>
+      <a href="#SecurityRevision"
+         title="http://dockerpedia.inf.utfsm.cl/vocab#SecurityRevision">security revision of a software package</a>
    </li>
    <li>
-      <a href="#isLayerOf" title="http://dockerpedia.inf.utfsm.cl/vocab#isLayerOf">
-         <span>is layer of</span>
+      <a href="#SoftwarePackage"
+         title="http://dockerpedia.inf.utfsm.cl/vocab#SoftwarePackage">Set of individual software files or resources that are packed together as a software collection that provides certain functionality as part of a larger system.</a>
+   </li>
+   <li>
+      <a href="#FileSystem" title="http://dockerpedia.inf.utfsm.cl/vocab#FileSystem">The way in which files are named and where they are placed logically for storage and retrieval.</a>
+   </li>
+   <li>
+      <a href="#ImageVersion"
+         title="http://dockerpedia.inf.utfsm.cl/vocab#ImageVersion">version of a software image</a>
+   </li>
+   <li>
+      <a href="#PackageVersion"
+         title="http://dockerpedia.inf.utfsm.cl/vocab#PackageVersion">Version of a software package</a>
+   </li>
+</ul><h4>Object Properties</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
+   <li>
+      <a href="#hasImage" title="http://dockerpedia.inf.utfsm.cl/vocab#hasImage">A docker file has software images</a>
+   </li>
+   <li>
+      <a href="#builds" title="http://dockerpedia.inf.utfsm.cl/vocab#builds">A DockerFile builds a SoftwareImage since the DockerFile is a description of that image</a>
+   </li>
+   <li>
+      <a href="#isVersionOf"
+         title="http://dockerpedia.inf.utfsm.cl/vocab#isVersionOf">a package version is a versuon of a software component</a>
+   </li>
+   <li>
+      <a href="#modifyLayer"
+         title="http://dockerpedia.inf.utfsm.cl/vocab#modifyLayer">a package version modifies a layer</a>
+   </li>
+   <li>
+      <a href="#fixPackageVersion"
+         title="http://dockerpedia.inf.utfsm.cl/vocab#fixPackageVersion">a security revision fixes a package version</a>
+   </li>
+   <li>
+      <a href="#fixVulnerability"
+         title="http://dockerpedia.inf.utfsm.cl/vocab#fixVulnerability">a security revision fixes a vulnerability</a>
+   </li>
+   <li>
+      <a href="#containPackages"
+         title="http://dockerpedia.inf.utfsm.cl/vocab#containPackages">a software image contains several packages</a>
+   </li>
+   <li>
+      <a href="#usesOS" title="http://dockerpedia.inf.utfsm.cl/vocab#usesOS">a software layer use an Operating System</a>
+   </li>
+   <li>
+      <a href="#affectsOS" title="http://dockerpedia.inf.utfsm.cl/vocab#affectsOS">a vulnerability that is present in an operating system</a>
+   </li>
+   <li>
+      <a href="#imageIdentifier"
+         title="http://dockerpedia.inf.utfsm.cl/vocab#imageIdentifier">
+         <span>An identifier of a software image</span>
       </a>
    </li>
    <li>
       <a href="#isModifiedBy"
-         title="http://dockerpedia.inf.utfsm.cl/vocab#isModifiedBy">
-         <span>is modified by</span>
-      </a>
+         title="http://dockerpedia.inf.utfsm.cl/vocab#isModifiedBy">an image layer modifies a package version</a>
+   </li>
+   <li>
+      <a href="#hasFileSystem"
+         title="http://dockerpedia.inf.utfsm.cl/vocab#hasFileSystem">An OS has a file system in which install software</a>
+   </li>
+   <li>
+      <a href="#hasPackages"
+         title="http://dockerpedia.inf.utfsm.cl/vocab#hasPackages">one OS may have installed several software packages on it</a>
+   </li>
+   <li>
+      <a href="#hasRevision"
+         title="http://dockerpedia.inf.utfsm.cl/vocab#hasRevision">one package version may have a security revision fixing some vulnerability</a>
+   </li>
+   <li>
+      <a href="#hasVulnerability"
+         title="http://dockerpedia.inf.utfsm.cl/vocab#hasVulnerability">One package version may have one or more software vulnerabilities</a>
+   </li>
+   <li>
+      <a href="#composedBy" title="http://dockerpedia.inf.utfsm.cl/vocab#composedBy">One Software image may be composed of several layers</a>
+   </li>
+   <li>
+      <a href="#hasLayer" title="http://dockerpedia.inf.utfsm.cl/vocab#hasLayer">one software images may be composed of several layers</a>
+   </li>
+   <li>
+      <a href="#isLayerOf" title="http://dockerpedia.inf.utfsm.cl/vocab#isLayerOf">one software layer is part of a software image</a>
+   </li>
+   <li>
+      <a href="#isAffectedBy"
+         title="http://dockerpedia.inf.utfsm.cl/vocab#isAffectedBy">Operating Systems are affected by software vulnerabilities</a>
    </li>
    <li>
       <a href="#isPackageOf"
-         title="http://dockerpedia.inf.utfsm.cl/vocab#isPackageOf">
-         <span>is package of</span>
-      </a>
+         title="http://dockerpedia.inf.utfsm.cl/vocab#isPackageOf">software components are package on an Operating System</a>
    </li>
    <li>
-      <a href="#isVersionOf"
-         title="http://dockerpedia.inf.utfsm.cl/vocab#isVersionOf">
-         <span>is version of</span>
-      </a>
+      <a href="#deployedOn" title="http://dockerpedia.inf.utfsm.cl/vocab#deployedOn">software images deploy on FileSystems</a>
    </li>
-   <li>
-      <a href="#modifyLayer"
-         title="http://dockerpedia.inf.utfsm.cl/vocab#modifyLayer">
-         <span>modify layer</span>
-      </a>
-   </li>
-   <li>
-      <a href="#usesOS" title="http://dockerpedia.inf.utfsm.cl/vocab#usesOS">
-         <span>uses o s</span>
-      </a>
-   </li>
-</ul><h4>Data Properties</h4><ul class="hlist">
+</ul><h4>Data Properties</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
    <li>
       <a href="#imageIdentifier"
          title="http://dockerpedia.inf.utfsm.cl/vocab#imageIdentifier">
-         <span>image identifier</span>
+         <span>An identifier of a software image</span>
       </a>
    </li>
-</ul><iframe align="center" width="100%" height ="500px" src="webvowl/index.html#"></iframe> </html>
+</ul><iframe align="center" width="100%" height ="500px" src="webvowl/index.html"></iframe> 
