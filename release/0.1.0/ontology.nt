@@ -1,132 +1,246 @@
 <http://dockerpedia.inf.utfsm.cl/vocab> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
 <http://dockerpedia.inf.utfsm.cl/vocab> <http://www.w3.org/2002/07/owl#imports> <http://purl.org/net/wicus-stack> .
-<http://dockerpedia.inf.utfsm.cl/vocab> <http://purl.org/dc/elements/1.1/creator> "Carlos Buil-Aranda"@en .
 <http://dockerpedia.inf.utfsm.cl/vocab> <http://purl.org/dc/elements/1.1/creator> "Hernán Vargas"@es .
-<http://dockerpedia.inf.utfsm.cl/vocab> <http://purl.org/dc/elements/1.1/creator> "Maximiliano Osorio"@en .
+<http://dockerpedia.inf.utfsm.cl/vocab> <http://purl.org/dc/elements/1.1/creator> "Carlos Buil-Aranda" .
+<http://dockerpedia.inf.utfsm.cl/vocab> <http://purl.org/dc/elements/1.1/creator> "Maximiliano Osorio" .
 <http://dockerpedia.inf.utfsm.cl/vocab> <http://purl.org/dc/elements/1.1/title> "The DockerPedia Ontology" .
-<http://dockerpedia.inf.utfsm.cl/vocab> <http://purl.org/vocab/vann/preferredNamespacePrefix> "dp"@en .
-<http://dockerpedia.inf.utfsm.cl/vocab> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://dockerpedia.inf.utfsm.cl/vocab#"@en .
-<http://dockerpedia.inf.utfsm.cl/vocab> <http://www.w3.org/2000/01/rdf-schema#comment> "An ontology for describing containers and their software components."@en .
+<http://dockerpedia.inf.utfsm.cl/vocab> <http://purl.org/vocab/vann/preferredNamespacePrefix> "dp" .
+<http://dockerpedia.inf.utfsm.cl/vocab> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://dockerpedia.inf.utfsm.cl/vocab#" .
+<http://dockerpedia.inf.utfsm.cl/vocab> <http://www.w3.org/2000/01/rdf-schema#comment> "An ontology for describing containers and their software components." .
 <http://dockerpedia.inf.utfsm.cl/vocab> <http://www.w3.org/2002/07/owl#versionInfo> "0.1.0" .
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://dockerpedia.inf.utfsm.cl/vocab#affectsOS
 <http://dockerpedia.inf.utfsm.cl/vocab#affectsOS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://dockerpedia.inf.utfsm.cl/vocab#affectsOS> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dockerpedia.inf.utfsm.cl/vocab#SoftwareVulnerability> .
 <http://dockerpedia.inf.utfsm.cl/vocab#affectsOS> <http://www.w3.org/2000/01/rdf-schema#range> <http://dockerpedia.inf.utfsm.cl/vocab#OperatingSystem> .
-<http://dockerpedia.inf.utfsm.cl/vocab#affectsOS> <http://www.w3.org/2000/01/rdf-schema#comment> "a vulnerability that is present in an operating system"@en .
+<http://dockerpedia.inf.utfsm.cl/vocab#affectsOS> <http://www.w3.org/2000/01/rdf-schema#comment> "a vulnerability that is present in an operating system" .
+# 
+# http://dockerpedia.inf.utfsm.cl/vocab#builds
 <http://dockerpedia.inf.utfsm.cl/vocab#builds> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://dockerpedia.inf.utfsm.cl/vocab#builds> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dockerpedia.inf.utfsm.cl/vocab#DockerFile> .
 <http://dockerpedia.inf.utfsm.cl/vocab#builds> <http://www.w3.org/2000/01/rdf-schema#range> <http://dockerpedia.inf.utfsm.cl/vocab#SoftwareImage> .
-<http://dockerpedia.inf.utfsm.cl/vocab#builds> <http://www.w3.org/2000/01/rdf-schema#comment> "A DockerFile builds a SoftwareImage since the DockerFile is a description of that image"@en .
+<http://dockerpedia.inf.utfsm.cl/vocab#builds> <http://www.w3.org/2000/01/rdf-schema#comment> "A DockerFile builds a SoftwareImage since the DockerFile is a description of that image" .
+# 
+# http://dockerpedia.inf.utfsm.cl/vocab#composedBy
 <http://dockerpedia.inf.utfsm.cl/vocab#composedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://dockerpedia.inf.utfsm.cl/vocab#composedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dockerpedia.inf.utfsm.cl/vocab#SoftwareImage> .
 <http://dockerpedia.inf.utfsm.cl/vocab#composedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://dockerpedia.inf.utfsm.cl/vocab#ImageLayer> .
-<http://dockerpedia.inf.utfsm.cl/vocab#composedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "One Software image may be composed of several layers"@en .
+<http://dockerpedia.inf.utfsm.cl/vocab#composedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "One Software image may be composed of several layers" .
+# 
+# http://dockerpedia.inf.utfsm.cl/vocab#containPackages
 <http://dockerpedia.inf.utfsm.cl/vocab#containPackages> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://dockerpedia.inf.utfsm.cl/vocab#containPackages> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dockerpedia.inf.utfsm.cl/vocab#SoftwareImage> .
 <http://dockerpedia.inf.utfsm.cl/vocab#containPackages> <http://www.w3.org/2000/01/rdf-schema#range> <http://dockerpedia.inf.utfsm.cl/vocab#SoftwarePackage> .
-<http://dockerpedia.inf.utfsm.cl/vocab#containPackages> <http://www.w3.org/2000/01/rdf-schema#comment> "a software image contains several packages"@en .
+<http://dockerpedia.inf.utfsm.cl/vocab#containPackages> <http://www.w3.org/2000/01/rdf-schema#comment> "a software image contains several packages" .
+# 
+# http://dockerpedia.inf.utfsm.cl/vocab#deployedOn
 <http://dockerpedia.inf.utfsm.cl/vocab#deployedOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://dockerpedia.inf.utfsm.cl/vocab#deployedOn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dockerpedia.inf.utfsm.cl/vocab#SoftwarePackage> .
 <http://dockerpedia.inf.utfsm.cl/vocab#deployedOn> <http://www.w3.org/2000/01/rdf-schema#range> <http://dockerpedia.inf.utfsm.cl/vocab#FileSystem> .
-<http://dockerpedia.inf.utfsm.cl/vocab#deployedOn> <http://www.w3.org/2000/01/rdf-schema#comment> "software images deploy on FileSystems"@en .
+<http://dockerpedia.inf.utfsm.cl/vocab#deployedOn> <http://www.w3.org/2000/01/rdf-schema#comment> "software images deploy on FileSystems" .
+# 
+# http://dockerpedia.inf.utfsm.cl/vocab#fixPackageVersion
 <http://dockerpedia.inf.utfsm.cl/vocab#fixPackageVersion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://dockerpedia.inf.utfsm.cl/vocab#fixPackageVersion> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dockerpedia.inf.utfsm.cl/vocab#SecurityRevision> .
 <http://dockerpedia.inf.utfsm.cl/vocab#fixPackageVersion> <http://www.w3.org/2000/01/rdf-schema#range> <http://dockerpedia.inf.utfsm.cl/vocab#PackageVersion> .
-<http://dockerpedia.inf.utfsm.cl/vocab#fixPackageVersion> <http://www.w3.org/2000/01/rdf-schema#comment> "a security revision fixes a package version"@en .
+<http://dockerpedia.inf.utfsm.cl/vocab#fixPackageVersion> <http://www.w3.org/2000/01/rdf-schema#comment> "a security revision fixes a package version" .
+# 
+# http://dockerpedia.inf.utfsm.cl/vocab#fixVulnerability
 <http://dockerpedia.inf.utfsm.cl/vocab#fixVulnerability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://dockerpedia.inf.utfsm.cl/vocab#fixVulnerability> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dockerpedia.inf.utfsm.cl/vocab#SecurityRevision> .
 <http://dockerpedia.inf.utfsm.cl/vocab#fixVulnerability> <http://www.w3.org/2000/01/rdf-schema#range> <http://dockerpedia.inf.utfsm.cl/vocab#SoftwareVulnerability> .
-<http://dockerpedia.inf.utfsm.cl/vocab#fixVulnerability> <http://www.w3.org/2000/01/rdf-schema#comment> "a security revision fixes a vulnerability"@en .
+<http://dockerpedia.inf.utfsm.cl/vocab#fixVulnerability> <http://www.w3.org/2000/01/rdf-schema#comment> "a security revision fixes a vulnerability" .
+# 
+# http://dockerpedia.inf.utfsm.cl/vocab#hasFileSystem
 <http://dockerpedia.inf.utfsm.cl/vocab#hasFileSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://dockerpedia.inf.utfsm.cl/vocab#hasFileSystem> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dockerpedia.inf.utfsm.cl/vocab#OperatingSystem> .
 <http://dockerpedia.inf.utfsm.cl/vocab#hasFileSystem> <http://www.w3.org/2000/01/rdf-schema#range> <http://dockerpedia.inf.utfsm.cl/vocab#FileSystem> .
-<http://dockerpedia.inf.utfsm.cl/vocab#hasFileSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "An OS has a file system in which install software"@en .
+<http://dockerpedia.inf.utfsm.cl/vocab#hasFileSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "An OS has a file system in which install software" .
+# 
+# http://dockerpedia.inf.utfsm.cl/vocab#hasImage
 <http://dockerpedia.inf.utfsm.cl/vocab#hasImage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://dockerpedia.inf.utfsm.cl/vocab#hasImage> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dockerpedia.inf.utfsm.cl/vocab#DockerFile> .
 <http://dockerpedia.inf.utfsm.cl/vocab#hasImage> <http://www.w3.org/2000/01/rdf-schema#range> <http://dockerpedia.inf.utfsm.cl/vocab#SoftwareImage> .
-<http://dockerpedia.inf.utfsm.cl/vocab#hasImage> <http://www.w3.org/2000/01/rdf-schema#comment> "A docker file has software images"@en .
+<http://dockerpedia.inf.utfsm.cl/vocab#hasImage> <http://www.w3.org/2000/01/rdf-schema#comment> "A docker file has software images" .
+# 
+# http://dockerpedia.inf.utfsm.cl/vocab#hasLayer
 <http://dockerpedia.inf.utfsm.cl/vocab#hasLayer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://dockerpedia.inf.utfsm.cl/vocab#hasLayer> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dockerpedia.inf.utfsm.cl/vocab#SoftwareImage> .
 <http://dockerpedia.inf.utfsm.cl/vocab#hasLayer> <http://www.w3.org/2000/01/rdf-schema#range> <http://dockerpedia.inf.utfsm.cl/vocab#ImageLayer> .
-<http://dockerpedia.inf.utfsm.cl/vocab#hasLayer> <http://www.w3.org/2000/01/rdf-schema#comment> "one software images may be composed of several layers"@en .
+<http://dockerpedia.inf.utfsm.cl/vocab#hasLayer> <http://www.w3.org/2000/01/rdf-schema#comment> "one software images may be composed of several layers" .
+# 
+# http://dockerpedia.inf.utfsm.cl/vocab#hasPackages
 <http://dockerpedia.inf.utfsm.cl/vocab#hasPackages> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://dockerpedia.inf.utfsm.cl/vocab#hasPackages> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dockerpedia.inf.utfsm.cl/vocab#OperatingSystem> .
 <http://dockerpedia.inf.utfsm.cl/vocab#hasPackages> <http://www.w3.org/2000/01/rdf-schema#range> <http://dockerpedia.inf.utfsm.cl/vocab#SoftwarePackage> .
-<http://dockerpedia.inf.utfsm.cl/vocab#hasPackages> <http://www.w3.org/2000/01/rdf-schema#comment> "one OS may have installed several software packages on it"@en .
+<http://dockerpedia.inf.utfsm.cl/vocab#hasPackages> <http://www.w3.org/2000/01/rdf-schema#comment> "one OS may have installed several software packages on it" .
+# 
+# http://dockerpedia.inf.utfsm.cl/vocab#hasRevision
 <http://dockerpedia.inf.utfsm.cl/vocab#hasRevision> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://dockerpedia.inf.utfsm.cl/vocab#hasRevision> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dockerpedia.inf.utfsm.cl/vocab#PackageVersion> .
 <http://dockerpedia.inf.utfsm.cl/vocab#hasRevision> <http://www.w3.org/2000/01/rdf-schema#range> <http://dockerpedia.inf.utfsm.cl/vocab#SecurityRevision> .
-<http://dockerpedia.inf.utfsm.cl/vocab#hasRevision> <http://www.w3.org/2000/01/rdf-schema#comment> "one package version may have a security revision fixing some vulnerability"@en .
+<http://dockerpedia.inf.utfsm.cl/vocab#hasRevision> <http://www.w3.org/2000/01/rdf-schema#comment> "one package version may have a security revision fixing some vulnerability" .
+# 
+# http://dockerpedia.inf.utfsm.cl/vocab#hasVulnerability
 <http://dockerpedia.inf.utfsm.cl/vocab#hasVulnerability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://dockerpedia.inf.utfsm.cl/vocab#hasVulnerability> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dockerpedia.inf.utfsm.cl/vocab#PackageVersion> .
 <http://dockerpedia.inf.utfsm.cl/vocab#hasVulnerability> <http://www.w3.org/2000/01/rdf-schema#range> <http://dockerpedia.inf.utfsm.cl/vocab#SoftwareVulnerability> .
-<http://dockerpedia.inf.utfsm.cl/vocab#hasVulnerability> <http://www.w3.org/2000/01/rdf-schema#comment> "One package version may have one or more software vulnerabilities"@en .
+<http://dockerpedia.inf.utfsm.cl/vocab#hasVulnerability> <http://www.w3.org/2000/01/rdf-schema#comment> "One package version may have one or more software vulnerabilities" .
+# 
+# http://dockerpedia.inf.utfsm.cl/vocab#imageIdentifier
 <http://dockerpedia.inf.utfsm.cl/vocab#imageIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://dockerpedia.inf.utfsm.cl/vocab#imageIdentifier> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dockerpedia.inf.utfsm.cl/vocab#SoftwareImage> .
 <http://dockerpedia.inf.utfsm.cl/vocab#imageIdentifier> <http://www.w3.org/2000/01/rdf-schema#range> <http://dockerpedia.inf.utfsm.cl/vocab#imageIdentifier> .
-<http://dockerpedia.inf.utfsm.cl/vocab#imageIdentifier> <http://www.w3.org/2000/01/rdf-schema#comment> "software images have identifiers"@en .
+# 
+# http://dockerpedia.inf.utfsm.cl/vocab#isAffectedBy
 <http://dockerpedia.inf.utfsm.cl/vocab#isAffectedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://dockerpedia.inf.utfsm.cl/vocab#isAffectedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dockerpedia.inf.utfsm.cl/vocab#OperatingSystem> .
 <http://dockerpedia.inf.utfsm.cl/vocab#isAffectedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://dockerpedia.inf.utfsm.cl/vocab#SoftwareVulnerability> .
-<http://dockerpedia.inf.utfsm.cl/vocab#isAffectedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Operating Systems are affected by software vulnerabilities"@en .
+<http://dockerpedia.inf.utfsm.cl/vocab#isAffectedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Operating Systems are affected by software vulnerabilities" .
+# 
+# http://dockerpedia.inf.utfsm.cl/vocab#isLayerOf
 <http://dockerpedia.inf.utfsm.cl/vocab#isLayerOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://dockerpedia.inf.utfsm.cl/vocab#isLayerOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dockerpedia.inf.utfsm.cl/vocab#ImageLayer> .
 <http://dockerpedia.inf.utfsm.cl/vocab#isLayerOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://dockerpedia.inf.utfsm.cl/vocab#Image> .
-<http://dockerpedia.inf.utfsm.cl/vocab#isLayerOf> <http://www.w3.org/2000/01/rdf-schema#comment> "one software layer is part of a software image"@en .
+<http://dockerpedia.inf.utfsm.cl/vocab#isLayerOf> <http://www.w3.org/2000/01/rdf-schema#comment> "one software layer is part of a software image" .
+# 
+# http://dockerpedia.inf.utfsm.cl/vocab#isModifiedBy
 <http://dockerpedia.inf.utfsm.cl/vocab#isModifiedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://dockerpedia.inf.utfsm.cl/vocab#isModifiedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dockerpedia.inf.utfsm.cl/vocab#ImageLayer> .
 <http://dockerpedia.inf.utfsm.cl/vocab#isModifiedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://dockerpedia.inf.utfsm.cl/vocab#PackageVersion> .
-<http://dockerpedia.inf.utfsm.cl/vocab#isModifiedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "an image layer modifies a package version"@en .
+<http://dockerpedia.inf.utfsm.cl/vocab#isModifiedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "an image layer modifies a package version" .
+# 
+# http://dockerpedia.inf.utfsm.cl/vocab#isPackageOf
 <http://dockerpedia.inf.utfsm.cl/vocab#isPackageOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://dockerpedia.inf.utfsm.cl/vocab#isPackageOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/wicus-stack#SoftwareComponent> .
 <http://dockerpedia.inf.utfsm.cl/vocab#isPackageOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://dockerpedia.inf.utfsm.cl/vocab#OperatingSystem> .
-<http://dockerpedia.inf.utfsm.cl/vocab#isPackageOf> <http://www.w3.org/2000/01/rdf-schema#comment> "software components are package on an Operating System"@en .
+<http://dockerpedia.inf.utfsm.cl/vocab#isPackageOf> <http://www.w3.org/2000/01/rdf-schema#comment> "software components are package on an Operating System" .
+# 
+# http://dockerpedia.inf.utfsm.cl/vocab#isPresent
 <http://dockerpedia.inf.utfsm.cl/vocab#isPresent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://dockerpedia.inf.utfsm.cl/vocab#isVersionOf
 <http://dockerpedia.inf.utfsm.cl/vocab#isVersionOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://dockerpedia.inf.utfsm.cl/vocab#isVersionOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dockerpedia.inf.utfsm.cl/vocab#PackageVersion> .
 <http://dockerpedia.inf.utfsm.cl/vocab#isVersionOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/net/wicus-stack#SoftwareComponent> .
-<http://dockerpedia.inf.utfsm.cl/vocab#isVersionOf> <http://www.w3.org/2000/01/rdf-schema#comment> "a package version is a versuon of a software component"@en .
+<http://dockerpedia.inf.utfsm.cl/vocab#isVersionOf> <http://www.w3.org/2000/01/rdf-schema#comment> "a package version is a versuon of a software component" .
+# 
+# http://dockerpedia.inf.utfsm.cl/vocab#modifyLayer
 <http://dockerpedia.inf.utfsm.cl/vocab#modifyLayer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://dockerpedia.inf.utfsm.cl/vocab#modifyLayer> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dockerpedia.inf.utfsm.cl/vocab#PackageVersion> .
 <http://dockerpedia.inf.utfsm.cl/vocab#modifyLayer> <http://www.w3.org/2000/01/rdf-schema#range> <http://dockerpedia.inf.utfsm.cl/vocab#ImageLayer> .
-<http://dockerpedia.inf.utfsm.cl/vocab#modifyLayer> <http://www.w3.org/2000/01/rdf-schema#comment> "a package version modifies a layer"@en .
+<http://dockerpedia.inf.utfsm.cl/vocab#modifyLayer> <http://www.w3.org/2000/01/rdf-schema#comment> "a package version modifies a layer" .
+# 
+# http://dockerpedia.inf.utfsm.cl/vocab#usesOS
 <http://dockerpedia.inf.utfsm.cl/vocab#usesOS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://dockerpedia.inf.utfsm.cl/vocab#usesOS> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dockerpedia.inf.utfsm.cl/vocab#ImageLayer> .
 <http://dockerpedia.inf.utfsm.cl/vocab#usesOS> <http://www.w3.org/2000/01/rdf-schema#range> <http://dockerpedia.inf.utfsm.cl/vocab#OperatingSystem> .
-<http://dockerpedia.inf.utfsm.cl/vocab#usesOS> <http://www.w3.org/2000/01/rdf-schema#comment> "a software layer use an Operating System"@en .
+<http://dockerpedia.inf.utfsm.cl/vocab#usesOS> <http://www.w3.org/2000/01/rdf-schema#comment> "a software layer use an Operating System" .
+# 
+# http://purl.org/net/wicus-stack#hasVersion
 <http://purl.org/net/wicus-stack#hasVersion> <http://www.w3.org/2000/01/rdf-schema#range> <http://dockerpedia.inf.utfsm.cl/vocab#PackageVersion> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://dockerpedia.inf.utfsm.cl/vocab#imageIdentifier
 <http://dockerpedia.inf.utfsm.cl/vocab#imageIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://dockerpedia.inf.utfsm.cl/vocab#imageIdentifier> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://dockerpedia.inf.utfsm.cl/vocab#DockerFile
 <http://dockerpedia.inf.utfsm.cl/vocab#DockerFile> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://dockerpedia.inf.utfsm.cl/vocab#DockerFile> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/wicus-stack#DeploymentScript> .
-<http://dockerpedia.inf.utfsm.cl/vocab#DockerFile> <http://www.w3.org/2000/01/rdf-schema#comment> "A file containing the instructions required to build an image (docker:SoftwareImage) in the Docker framework"@en .
+<http://dockerpedia.inf.utfsm.cl/vocab#DockerFile> <http://www.w3.org/2000/01/rdf-schema#comment> "A file containing the instructions required to build an image (docker:SoftwareImage) in the Docker framework" .
+# 
+# http://dockerpedia.inf.utfsm.cl/vocab#FileSystem
 <http://dockerpedia.inf.utfsm.cl/vocab#FileSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://dockerpedia.inf.utfsm.cl/vocab#FileSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "The way in which files are named and where they are placed logically for storage and retrieval."@en .
+<http://dockerpedia.inf.utfsm.cl/vocab#FileSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "The way in which files are named and where they are placed logically for storage and retrieval." .
+# 
+# http://dockerpedia.inf.utfsm.cl/vocab#Image
 <http://dockerpedia.inf.utfsm.cl/vocab#Image> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://dockerpedia.inf.utfsm.cl/vocab#Image> <http://www.w3.org/2000/01/rdf-schema#comment> "A serialized copy of the state of a software stored in some non-volatile form such as a file."@en .
+<http://dockerpedia.inf.utfsm.cl/vocab#Image> <http://www.w3.org/2000/01/rdf-schema#comment> "A serialized copy of the state of a software stored in some non-volatile form such as a file." .
+# 
+# http://dockerpedia.inf.utfsm.cl/vocab#ImageLayer
 <http://dockerpedia.inf.utfsm.cl/vocab#ImageLayer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://dockerpedia.inf.utfsm.cl/vocab#ImageLayer> <http://www.w3.org/2000/01/rdf-schema#comment> "A layer of a Docker image are a set files generated from running a command from a DockerFile."@en .
+<http://dockerpedia.inf.utfsm.cl/vocab#ImageLayer> <http://www.w3.org/2000/01/rdf-schema#comment> "A layer of a Docker image are a set files generated from running a command from a DockerFile." .
+# 
+# http://dockerpedia.inf.utfsm.cl/vocab#ImageVersion
 <http://dockerpedia.inf.utfsm.cl/vocab#ImageVersion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://dockerpedia.inf.utfsm.cl/vocab#ImageVersion> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/wicus-stack#Version> .
-<http://dockerpedia.inf.utfsm.cl/vocab#ImageVersion> <http://www.w3.org/2000/01/rdf-schema#comment> "version of a software image"@en .
+<http://dockerpedia.inf.utfsm.cl/vocab#ImageVersion> <http://www.w3.org/2000/01/rdf-schema#comment> "version of a software image" .
+# 
+# http://dockerpedia.inf.utfsm.cl/vocab#LayerModification
 <http://dockerpedia.inf.utfsm.cl/vocab#LayerModification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://dockerpedia.inf.utfsm.cl/vocab#LayerModification> <http://www.w3.org/2000/01/rdf-schema#comment> "A modification of a layer in a DockerFile"@en .
+<http://dockerpedia.inf.utfsm.cl/vocab#LayerModification> <http://www.w3.org/2000/01/rdf-schema#comment> "A modification of a layer in a DockerFile" .
+# 
+# http://dockerpedia.inf.utfsm.cl/vocab#OperatingSystem
 <http://dockerpedia.inf.utfsm.cl/vocab#OperatingSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://dockerpedia.inf.utfsm.cl/vocab#OperatingSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "A software operating system repersentation"@en .
+<http://dockerpedia.inf.utfsm.cl/vocab#OperatingSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "A software operating system repersentation" .
+# 
+# http://dockerpedia.inf.utfsm.cl/vocab#PackageVersion
 <http://dockerpedia.inf.utfsm.cl/vocab#PackageVersion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://dockerpedia.inf.utfsm.cl/vocab#PackageVersion> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/wicus-stack#Version> .
-<http://dockerpedia.inf.utfsm.cl/vocab#PackageVersion> <http://www.w3.org/2000/01/rdf-schema#comment> "Version of a software package"@en .
+<http://dockerpedia.inf.utfsm.cl/vocab#PackageVersion> <http://www.w3.org/2000/01/rdf-schema#comment> "Version of a software package" .
+# 
+# http://dockerpedia.inf.utfsm.cl/vocab#SecurityRevision
 <http://dockerpedia.inf.utfsm.cl/vocab#SecurityRevision> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://dockerpedia.inf.utfsm.cl/vocab#SecurityRevision> <http://www.w3.org/2000/01/rdf-schema#comment> "security revision of a software package"@en .
+<http://dockerpedia.inf.utfsm.cl/vocab#SecurityRevision> <http://www.w3.org/2000/01/rdf-schema#comment> "security revision of a software package" .
+# 
+# http://dockerpedia.inf.utfsm.cl/vocab#SoftwareImage
 <http://dockerpedia.inf.utfsm.cl/vocab#SoftwareImage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://dockerpedia.inf.utfsm.cl/vocab#SoftwareImage> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://dockerpedia.inf.utfsm.cl/vocab#Image> .
-<http://dockerpedia.inf.utfsm.cl/vocab#SoftwareImage> <http://www.w3.org/2000/01/rdf-schema#comment> "A read-only template that contains a set of instructions for creating a container."@en .
+<http://dockerpedia.inf.utfsm.cl/vocab#SoftwareImage> <http://www.w3.org/2000/01/rdf-schema#comment> "A read-only template that contains a set of instructions for creating a container." .
+# 
+# http://dockerpedia.inf.utfsm.cl/vocab#SoftwarePackage
 <http://dockerpedia.inf.utfsm.cl/vocab#SoftwarePackage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://dockerpedia.inf.utfsm.cl/vocab#SoftwarePackage> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/wicus-stack#SoftwareComponent> .
-<http://dockerpedia.inf.utfsm.cl/vocab#SoftwarePackage> <http://www.w3.org/2000/01/rdf-schema#comment> "Set of individual software files or resources that are packed together as a software collection that provides certain functionality as part of a larger system."@en .
+<http://dockerpedia.inf.utfsm.cl/vocab#SoftwarePackage> <http://www.w3.org/2000/01/rdf-schema#comment> "Set of individual software files or resources that are packed together as a software collection that provides certain functionality as part of a larger system." .
+# 
+# http://dockerpedia.inf.utfsm.cl/vocab#SoftwareVulnerability
 <http://dockerpedia.inf.utfsm.cl/vocab#SoftwareVulnerability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://dockerpedia.inf.utfsm.cl/vocab#SoftwareVulnerability> <http://www.w3.org/2000/01/rdf-schema#comment> "a mistake in a software component that leaves it open to exploitation by an adversary"@en .
+<http://dockerpedia.inf.utfsm.cl/vocab#SoftwareVulnerability> <http://www.w3.org/2000/01/rdf-schema#comment> "a mistake in a software component that leaves it open to exploitation by an adversary" .
+# 
+# http://dockerpedia.inf.utfsm.cl/vocab#imageIdentifier
 <http://dockerpedia.inf.utfsm.cl/vocab#imageIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://dockerpedia.inf.utfsm.cl/vocab#imageIdentifier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/dc/elements/1.1/identifier> .
-<http://dockerpedia.inf.utfsm.cl/vocab#imageIdentifier> <http://www.w3.org/2000/01/rdf-schema#comment> "An identifier of a software image"@en .
+# 
+# http://purl.org/dc/elements/1.1/identifier
 <http://purl.org/dc/elements/1.1/identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/dc/elements/1.1/identifier> <http://www.w3.org/2000/01/rdf-schema#comment> "A name that identifies either a unique object or a unique class of objects."@en .
+<http://purl.org/dc/elements/1.1/identifier> <http://www.w3.org/2000/01/rdf-schema#comment> "A name that identifies either a unique object or a unique class of objects." .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Annotations
+# #
+# #################################################################
+# 
+# 
+<http://dockerpedia.inf.utfsm.cl/vocab#imageIdentifier> <http://www.w3.org/2000/01/rdf-schema#comment> "An identifier of a software image" .
+<http://dockerpedia.inf.utfsm.cl/vocab#imageIdentifier> <http://www.w3.org/2000/01/rdf-schema#comment> "software images have identifiers" .
+# 
+# Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/
