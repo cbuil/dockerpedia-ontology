@@ -10,6 +10,8 @@
                                          owl:imports <http://purl.org/net/wicus-stack> ;
                                          <http://purl.org/dc/elements/1.1/creator> "Daniel Garijo"^^rdfs:Literal ,
                                                                                    "Maximiliano Osorio" ;
+                                         <http://purl.org/dc/terms/description> "This ontology describes Docker and its components for virtualizing software."^^rdfs:Literal ;
+                                         rdfs:isDefinedBy "dpv"^^rdfs:Literal ;
                                          owl:versionInfo "0.1.0" ;
                                          <http://purl.org/dc/elements/1.1/creator> "Carlos Buil-Aranda" ;
                                          <http://purl.org/dc/terms/license> """The MIT License (MIT)
@@ -24,8 +26,7 @@ THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
                                          <http://purl.org/vocab/vann/preferredNamespaceUri> "http://dockerpedia.inf.utfsm.cl/vocab#" ;
                                          <http://purl.org/dc/elements/1.1/creator> "Idafen Santana"^^rdfs:Literal ;
                                          rdfs:comment "An ontology for describing containers and their software components." ;
-                                         <http://purl.org/dc/elements/1.1/title> "The DockerPedia Ontology" ;
-                                         <http://purl.org/vocab/vann/preferredNamespacePrefix> "dp" .
+                                         <http://purl.org/dc/elements/1.1/title> "The DockerPedia Ontology" .
 
 #################################################################
 #    Annotation properties
