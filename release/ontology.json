@@ -1,0 +1,422 @@
+[ {
+  "@id" : "http://dockerpedia.inf.utfsm.cl/vocab",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@language" : "es",
+    "@value" : "Hernán Vargas"
+  }, {
+    "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "@value" : "Daniel Garijo"
+  }, {
+    "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "@value" : "Idafen Santana"
+  }, {
+    "@value" : "Carlos Buil-Aranda"
+  }, {
+    "@value" : "Maximiliano Osorio"
+  } ],
+  "http://purl.org/dc/elements/1.1/title" : [ {
+    "@value" : "The DockerPedia Ontology"
+  } ],
+  "http://purl.org/dc/terms/license" : [ {
+    "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "@value" : "The MIT License (MIT)\nCopyright © 2021, Maximiliano Osorio, Carlos Buil, Hernán Vargas, Daniel Garijo, Idafen Santana.\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE."
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespacePrefix" : [ {
+    "@value" : "dp"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespaceUri" : [ {
+    "@value" : "http://dockerpedia.inf.utfsm.cl/vocab#"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "An ontology for describing containers and their software components."
+  } ],
+  "http://www.w3.org/2002/07/owl#imports" : [ {
+    "@id" : "http://purl.org/net/wicus-stack"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@value" : "0.1.0"
+  } ]
+}, {
+  "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#DockerFile",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A file containing the instructions required to build an image (docker:SoftwareImage) in the Docker framework"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/net/wicus-stack#DeploymentScript"
+  } ]
+}, {
+  "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#FileSystem",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The way in which files are named and where they are placed logically for storage and retrieval."
+  } ]
+}, {
+  "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#Image",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A serialized copy of the state of a software stored in some non-volatile form such as a file."
+  } ]
+}, {
+  "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#ImageLayer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A layer of a Docker image are a set files generated from running a command from a DockerFile."
+  } ]
+}, {
+  "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#ImageVersion",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "version of a software image"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/net/wicus-stack#Version"
+  } ]
+}, {
+  "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#LayerModification",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A modification of a layer in a DockerFile"
+  } ]
+}, {
+  "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#OperatingSystem",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A software operating system repersentation"
+  } ]
+}, {
+  "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#PackageVersion",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Version of a software package"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/net/wicus-stack#Version"
+  } ]
+}, {
+  "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#SecurityRevision",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "security revision of a software package"
+  } ]
+}, {
+  "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#SoftwareImage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A read-only template that contains a set of instructions for creating a container."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#Image"
+  } ]
+}, {
+  "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#SoftwarePackage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Set of individual software files or resources that are packed together as a software collection that provides certain functionality as part of a larger system."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/net/wicus-stack#SoftwareComponent"
+  } ]
+}, {
+  "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#SoftwareVulnerability",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "a mistake in a software component that leaves it open to exploitation by an adversary"
+  } ]
+}, {
+  "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#affectsOS",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "a vulnerability that is present in an operating system"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#SoftwareVulnerability"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#OperatingSystem"
+  } ]
+}, {
+  "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#builds",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A DockerFile builds a SoftwareImage since the DockerFile is a description of that image"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#DockerFile"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#SoftwareImage"
+  } ]
+}, {
+  "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#composedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "One Software image may be composed of several layers"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#SoftwareImage"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#ImageLayer"
+  } ]
+}, {
+  "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#containSoftware",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "a software image contains several packages"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#SoftwareImage"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#SoftwarePackage"
+  } ]
+}, {
+  "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#deployedOn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "software images deploy on FileSystems"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#SoftwarePackage"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#FileSystem"
+  } ]
+}, {
+  "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#fixPackageVersion",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "a security revision fixes a package version"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#SecurityRevision"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#PackageVersion"
+  } ]
+}, {
+  "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#fixVulnerability",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "a security revision fixes a vulnerability"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#SecurityRevision"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#SoftwareVulnerability"
+  } ]
+}, {
+  "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#hasFileSystem",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "An OS has a file system in which install software"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#OperatingSystem"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#FileSystem"
+  } ]
+}, {
+  "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#hasImage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A docker file has software images"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#DockerFile"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#SoftwareImage"
+  } ]
+}, {
+  "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#hasPackages",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "one OS may have installed several software packages on it"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#OperatingSystem"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#SoftwarePackage"
+  } ]
+}, {
+  "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#hasRevision",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "one package version may have a security revision fixing some vulnerability"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#PackageVersion"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#SecurityRevision"
+  } ]
+}, {
+  "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#hasVulnerability",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "One package version may have one or more software vulnerabilities"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#PackageVersion"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#SoftwareVulnerability"
+  } ]
+}, {
+  "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#imageIdentifier",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "An identifier of a software image"
+  }, {
+    "@value" : "software images have identifiers"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#SoftwareImage"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#imageIdentifier"
+  }, {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/dc/elements/1.1/identifier"
+  } ]
+}, {
+  "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#isAffectedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Operating Systems are affected by software vulnerabilities"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#OperatingSystem"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#SoftwareVulnerability"
+  } ]
+}, {
+  "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#isInstalledOn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#PackageVersion"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#SoftwareImage"
+  } ]
+}, {
+  "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#isLayerOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "one software layer is part of a software image"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#ImageLayer"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#Image"
+  }, {
+    "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#ImageLayer"
+  } ]
+}, {
+  "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#isModifiedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "an image layer modifies a package version"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#ImageLayer"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#PackageVersion"
+  } ]
+}, {
+  "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#isPackageOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "software components are package on an Operating System"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://purl.org/net/wicus-stack#SoftwareComponent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#OperatingSystem"
+  } ]
+}, {
+  "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#isPresent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#isVersionOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "a package version is a versuon of a software component"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#PackageVersion"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://purl.org/net/wicus-stack#SoftwareComponent"
+  } ]
+}, {
+  "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#modifyLayer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "a package version modifies a layer"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#PackageVersion"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#ImageLayer"
+  } ]
+}, {
+  "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#size",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#SoftwareImage"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#double"
+  } ]
+}, {
+  "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#tag",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#SoftwareImage"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#usesOS",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "a software layer use an Operating System"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#ImageLayer"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#OperatingSystem"
+  } ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/identifier",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A name that identifies either a unique object or a unique class of objects."
+  } ]
+}, {
+  "@id" : "http://purl.org/net/wicus-stack#hasVersion",
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#PackageVersion"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#SoftwareVulnerability"
+  } ]
+} ]

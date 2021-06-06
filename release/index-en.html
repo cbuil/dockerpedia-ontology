@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+ <link rel="stylesheet" href="resources/primer.css" media="screen" />    <link rel="stylesheet" href="resources/rec.css" media="screen" />    <link rel="stylesheet" href="resources/extra.css" media="screen" />    <link rel="stylesheet" href="resources/owl.css" media="screen" />    <title>The DockerPedia Ontology</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://dockerpedia.inf.utfsm.cl/vocab","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://dockerpedia.inf.utfsm.cl/vocab","name":"The DockerPedia Ontology", "headline":"An ontology for describing containers and their software components.", "datePublished":"Sun Jun 06 16:44:51 CLT 2021", "version":"0.1.0", "author":[{"@type":"Person","name":"Hernán Vargas"},{"@type":"Person","name":"Daniel Garijo"},{"@type":"Person","name":"Idafen Santana"},{"@type":"Person","name":"Carlos Buil-Aranda"},{"@type":"Person","name":"Maximiliano Osorio"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+ $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ };    $(function(){
+      $("#abstract").load("sections/abstract-en.html"); 
+      $("#introduction").load("sections/introduction-en.html"); 
+      $("#overview").load("sections/overview-en.html"); 
+      $("#description").load("sections/description-en.html"); 
+      $("#references").load("sections/references-en.html"); 
+      $("#crossref").load("sections/crossref-en.html", null, loadHash); 
+    });
+    </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
+<h1>The DockerPedia Ontology</h1>
+
+
+<dl>
+<dt>Latest version:</dt>
+<dd><a href="http://dockerpedia.inf.utfsm.cl/vocab">http://dockerpedia.inf.utfsm.cl/vocab</a></dd>
+<dt>Revision:</dt>
+<dd>0.1.0</dd>
+<dt>Authors:</dt>
+<dd>Hernán Vargas</dd><dd>Daniel Garijo</dd><dd>Idafen Santana</dd><dd>Carlos Buil-Aranda</dd><dd>Maximiliano Osorio</dd>
+
+<dt>Imported Ontologies:</dt>
+<dd><a href="http://purl.org/net/wicus-stack">wicus-stack</a></dd>
+
+<dt>Download serialization:</dt><dd><span><a href="ontology.json" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.xml" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License: </dt><dd><a href="http://insertlicenseURIhere.org" target="_blank"><img src="https://img.shields.io/badge/License-The%20MIT%20License%20(MIT)
+Copyright%20©%202021,%20Maximiliano%20Osorio,%20Carlos%20Buil,%20Hernán%20Vargas,%20Daniel%20Garijo,%20Idafen%20Santana.
+
+Permission%20is%20hereby%20granted,%20free%20of%20charge,%20to%20any%20person%20obtaining%20a%20copy%20of%20this%20software%20and%20associated%20documentation%20files%20(the%20“Software”),%20to%20deal%20in%20the%20Software%20without%20restriction,%20including%20without%20limitation%20the%20rights%20to%20use,%20copy,%20modify,%20merge,%20publish,%20distribute,%20sublicense,%20and/or%20sell%20copies%20of%20the%20Software,%20and%20to%20permit%20persons%20to%20whom%20the%20Software%20is%20furnished%20to%20do%20so,%20subject%20to%20the%20following%20conditions:
+
+The%20above%20copyright%20notice%20and%20this%20permission%20notice%20shall%20be%20included%20in%20all%20copies%20or%20substantial%20portions%20of%20the%20Software.
+
+THE%20SOFTWARE%20IS%20PROVIDED%20“AS%20IS”,%20WITHOUT%20WARRANTY%20OF%20ANY%20KIND,%20EXPRESS%20OR%20IMPLIED,%20INCLUDING%20BUT%20NOT%20LIMITED%20TO%20THE%20WARRANTIES%20OF%20MERCHANTABILITY,%20FITNESS%20FOR%20A%20PARTICULAR%20PURPOSE%20AND%20NONINFRINGEMENT.%20IN%20NO%20EVENT%20SHALL%20THE%20AUTHORS%20OR%20COPYRIGHT%20HOLDERS%20BE%20LIABLE%20FOR%20ANY%20CLAIM,%20DAMAGES%20OR%20OTHER%20LIABILITY,%20WHETHER%20IN%20AN%20ACTION%20OF%20CONTRACT,%20TORT%20OR%20OTHERWISE,%20ARISING%20FROM,%20OUT%20OF%20OR%20IN%20CONNECTION%20WITH%20THE%20SOFTWARE%20OR%20THE%20USE%20OR%20OTHER%20DEALINGS%20IN%20THE%20SOFTWARE.-blue.svg" alt="http://insertlicenseURIhere.org" /></a>
+</dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
+<!-- <dt>Evaluation:</dt><dd><a href="OOPSEvaluation/OOPSeval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
+<dd>Hernán Vargas,Daniel Garijo,Idafen Santana,Carlos Buil-Aranda,Maximiliano Osorio. The DockerPedia Ontology. Revision: 0.1.0.</dd>
+</dl>
+
+<hr/>
+</div>
+<div class="status">
+<div>
+<span>Ontology Specification Draft</span>
+</div>
+</div>     <div id="abstract"></div>
+<div id="toc"></div>     <div id="introduction"></div>
+     <div id="overview"></div>
+     <div id="description"></div>
+     <div id="crossref"></div>
+     <div id="references"></div>
+<div id="acknowledgments">
+<h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>
+The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
+</div>
+
+
+</div>
+</body>
+</html>
