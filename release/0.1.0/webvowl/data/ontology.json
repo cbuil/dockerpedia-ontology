@@ -8,12 +8,23 @@
     },
     "iri" : "http://dockerpedia.inf.utfsm.cl/vocab",
     "version" : "0.1.0",
-    "author" : [ "Carlos Buil-Aranda", "Maximiliano Osorio", "Hernán Vargas" ],
+    "author" : [ "Carlos Buil-Aranda", "Idafen Santana", "Daniel Garijo", "Maximiliano Osorio", "Hernán Vargas" ],
     "comments" : {
       "undefined" : "An ontology for describing containers and their software components."
     },
     "other" : {
+      "license" : [ {
+        "identifier" : "license",
+        "language" : "undefined",
+        "value" : "The MIT License (MIT)\nCopyright © 2021, Maximiliano Osorio, Carlos Buil, Hernán Vargas, Daniel Garijo, Idafen Santana.\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.",
+        "type" : "label"
+      } ],
       "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Idafen Santana",
+        "type" : "label"
+      }, {
         "identifier" : "creator",
         "language" : "undefined",
         "value" : "Carlos Buil-Aranda",
@@ -22,6 +33,11 @@
         "identifier" : "creator",
         "language" : "undefined",
         "value" : "Maximiliano Osorio",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Daniel Garijo",
         "type" : "label"
       }, {
         "identifier" : "creator",
@@ -35,16 +51,16 @@
         "value" : "dp",
         "type" : "label"
       } ],
-      "preferredNamespaceUri" : [ {
-        "identifier" : "preferredNamespaceUri",
-        "language" : "undefined",
-        "value" : "http://dockerpedia.inf.utfsm.cl/vocab#",
-        "type" : "label"
-      } ],
       "versionInfo" : [ {
         "identifier" : "versionInfo",
         "language" : "undefined",
         "value" : "0.1.0",
+        "type" : "label"
+      } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "http://dockerpedia.inf.utfsm.cl/vocab#",
         "type" : "label"
       } ],
       "title" : [ {
@@ -63,22 +79,31 @@
     "id" : "2",
     "type" : "owl:Class"
   }, {
-    "id" : "10",
+    "id" : "8",
+    "type" : "owl:Class"
+  }, {
+    "id" : "9",
     "type" : "owl:Class"
   }, {
     "id" : "11",
     "type" : "owl:Class"
   }, {
-    "id" : "13",
+    "id" : "16",
     "type" : "owl:Class"
   }, {
-    "id" : "17",
+    "id" : "22",
     "type" : "owl:Class"
   }, {
-    "id" : "41",
+    "id" : "45",
     "type" : "owl:Class"
   }, {
-    "id" : "42",
+    "id" : "44",
+    "type" : "owl:Class"
+  }, {
+    "id" : "18",
+    "type" : "owl:Class"
+  }, {
+    "id" : "55",
     "type" : "owl:Class"
   }, {
     "id" : "46",
@@ -87,82 +112,82 @@
     "id" : "40",
     "type" : "owl:Class"
   }, {
-    "id" : "36",
-    "type" : "owl:Class"
-  }, {
-    "id" : "9",
-    "type" : "owl:Class"
-  }, {
-    "id" : "39",
-    "type" : "owl:Class"
-  }, {
-    "id" : "12",
-    "type" : "owl:Class"
-  }, {
-    "id" : "31",
-    "type" : "owl:Class"
-  }, {
-    "id" : "1",
-    "type" : "owl:Class"
-  }, {
-    "id" : "15",
-    "type" : "owl:Class"
-  }, {
-    "id" : "34",
-    "type" : "owl:Class"
-  }, {
-    "id" : "53",
-    "type" : "owl:Class"
-  }, {
-    "id" : "30",
-    "type" : "owl:Class"
-  }, {
-    "id" : "25",
-    "type" : "owl:Class"
-  }, {
-    "id" : "7",
-    "type" : "owl:Class"
-  }, {
-    "id" : "21",
-    "type" : "rdfs:Literal"
-  }, {
-    "id" : "27",
-    "type" : "owl:Class"
-  }, {
-    "id" : "59",
-    "type" : "rdfs:Literal"
-  }, {
-    "id" : "72",
-    "type" : "rdfs:Literal"
-  }, {
-    "id" : "23",
-    "type" : "rdfs:Literal"
-  }, {
-    "id" : "82",
-    "type" : "rdfs:Literal"
-  }, {
-    "id" : "74",
-    "type" : "owl:Thing"
-  }, {
-    "id" : "19",
-    "type" : "owl:Class"
-  }, {
-    "id" : "45",
-    "type" : "owl:Class"
-  }, {
-    "id" : "86",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "65",
+    "id" : "10",
     "type" : "owl:Class"
   }, {
     "id" : "51",
     "type" : "owl:Class"
   }, {
+    "id" : "12",
+    "type" : "owl:Class"
+  }, {
+    "id" : "35",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "14",
+    "type" : "owl:Class"
+  }, {
+    "id" : "38",
+    "type" : "owl:Class"
+  }, {
+    "id" : "42",
+    "type" : "owl:Class"
+  }, {
+    "id" : "34",
+    "type" : "owl:Class"
+  }, {
+    "id" : "32",
+    "type" : "owl:Class"
+  }, {
+    "id" : "7",
+    "type" : "owl:Class"
+  }, {
+    "id" : "69",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "23",
+    "type" : "owl:Class"
+  }, {
+    "id" : "85",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "25",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "61",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "76",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "28",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "87",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "78",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "20",
+    "type" : "owl:Class"
+  }, {
+    "id" : "90",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "56",
+    "type" : "owl:Class"
+  }, {
+    "id" : "53",
+    "type" : "owl:Class"
+  }, {
     "id" : "5",
     "type" : "owl:Class"
   }, {
-    "id" : "94",
+    "id" : "99",
     "type" : "owl:Class"
   } ],
   "classAttribute" : [ {
@@ -200,7 +225,20 @@
     "comment" : {
       "undefined" : "A software operating system repersentation"
     },
-    "id" : "10"
+    "id" : "8"
+  }, {
+    "iri" : "http://purl.org/net/wicus-stack#SoftwareComponent",
+    "baseIri" : "http://purl.org/net/wicus-stack",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SoftwareComponent"
+    },
+    "subClasses" : [ "10" ],
+    "comment" : {
+      "undefined" : "A wstack:SoftwareComponent represents a software entity that can be deployed in a computational resource."
+    },
+    "attributes" : [ "external" ],
+    "id" : "9"
   }, {
     "iri" : "http://purl.org/net/wicus-stack#DeploymentScript",
     "baseIri" : "http://purl.org/net/wicus-stack",
@@ -215,19 +253,6 @@
     "attributes" : [ "external" ],
     "id" : "11"
   }, {
-    "iri" : "http://purl.org/net/wicus-stack#SoftwareComponent",
-    "baseIri" : "http://purl.org/net/wicus-stack",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "SoftwareComponent"
-    },
-    "subClasses" : [ "9" ],
-    "comment" : {
-      "undefined" : "A wstack:SoftwareComponent represents a software entity that can be deployed in a computational resource."
-    },
-    "attributes" : [ "external" ],
-    "id" : "13"
-  }, {
     "iri" : "http://dockerpedia.inf.utfsm.cl/vocab#FileSystem",
     "baseIri" : "http://dockerpedia.inf.utfsm.cl/vocab",
     "instances" : 0,
@@ -237,7 +262,7 @@
     "comment" : {
       "undefined" : "The way in which files are named and where they are placed logically for storage and retrieval."
     },
-    "id" : "17"
+    "id" : "16"
   }, {
     "iri" : "http://dockerpedia.inf.utfsm.cl/vocab#PackageVersion",
     "baseIri" : "http://dockerpedia.inf.utfsm.cl/vocab",
@@ -248,8 +273,8 @@
     "comment" : {
       "undefined" : "Version of a software package"
     },
-    "id" : "41",
-    "superClasses" : [ "27" ]
+    "id" : "22",
+    "superClasses" : [ "23" ]
   }, {
     "iri" : "http://purl.org/net/wicus-stack#OpenLicense",
     "baseIri" : "http://purl.org/net/wicus-stack",
@@ -261,8 +286,8 @@
       "undefined" : "A wstack:OpenLincense represents licenses that allow a software component to be used by any user."
     },
     "attributes" : [ "external" ],
-    "id" : "42",
-    "superClasses" : [ "40" ]
+    "id" : "45",
+    "superClasses" : [ "46" ]
   }, {
     "iri" : "http://dockerpedia.inf.utfsm.cl/vocab#Image",
     "baseIri" : "http://dockerpedia.inf.utfsm.cl/vocab",
@@ -274,7 +299,17 @@
     "comment" : {
       "undefined" : "A serialized copy of the state of a software stored in some non-volatile form such as a file."
     },
-    "id" : "46"
+    "id" : "44"
+  }, {
+    "instances" : 0,
+    "union" : [ "22", "23" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "18"
+  }, {
+    "instances" : 0,
+    "union" : [ "56", "44" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "55"
   }, {
     "iri" : "http://purl.org/net/wicus-stack#License",
     "baseIri" : "http://purl.org/net/wicus-stack",
@@ -282,12 +317,12 @@
     "label" : {
       "IRI-based" : "License"
     },
-    "subClasses" : [ "39", "42" ],
+    "subClasses" : [ "51", "45" ],
     "comment" : {
       "undefined" : "A wstack:License represents the licensing conditions under which a software component can be used."
     },
     "attributes" : [ "external" ],
-    "id" : "40"
+    "id" : "46"
   }, {
     "iri" : "http://purl.org/net/p-plan#Step",
     "baseIri" : "http://purl.org/net/p-plan",
@@ -297,7 +332,7 @@
     },
     "subClasses" : [ "1" ],
     "attributes" : [ "external" ],
-    "id" : "36"
+    "id" : "40"
   }, {
     "iri" : "http://dockerpedia.inf.utfsm.cl/vocab#SoftwarePackage",
     "baseIri" : "http://dockerpedia.inf.utfsm.cl/vocab",
@@ -308,8 +343,8 @@
     "comment" : {
       "undefined" : "Set of individual software files or resources that are packed together as a software collection that provides certain functionality as part of a larger system."
     },
-    "id" : "9",
-    "superClasses" : [ "13" ]
+    "id" : "10",
+    "superClasses" : [ "9" ]
   }, {
     "iri" : "http://purl.org/net/wicus-stack#NotOpenLicense",
     "baseIri" : "http://purl.org/net/wicus-stack",
@@ -321,8 +356,8 @@
       "undefined" : "A wstack:NotOpenLicense represents the set of licenses that restricts the usage of a software component, subject to certain conditions."
     },
     "attributes" : [ "external" ],
-    "id" : "39",
-    "superClasses" : [ "40" ]
+    "id" : "51",
+    "superClasses" : [ "46" ]
   }, {
     "iri" : "http://dockerpedia.inf.utfsm.cl/vocab#DockerFile",
     "baseIri" : "http://dockerpedia.inf.utfsm.cl/vocab",
@@ -346,7 +381,7 @@
       "undefined" : "A wstack:ConfigurationInfo represents the input information for deploying and configuring a software component."
     },
     "attributes" : [ "external" ],
-    "id" : "31"
+    "id" : "35"
   }, {
     "iri" : "http://purl.org/net/wicus-stack#DeploymentStep",
     "baseIri" : "http://purl.org/net/wicus-stack",
@@ -359,7 +394,7 @@
     },
     "attributes" : [ "external" ],
     "id" : "1",
-    "superClasses" : [ "36" ]
+    "superClasses" : [ "40" ]
   }, {
     "iri" : "http://dockerpedia.inf.utfsm.cl/vocab#SoftwareVulnerability",
     "baseIri" : "http://dockerpedia.inf.utfsm.cl/vocab",
@@ -370,7 +405,7 @@
     "comment" : {
       "undefined" : "a mistake in a software component that leaves it open to exploitation by an adversary"
     },
-    "id" : "15"
+    "id" : "14"
   }, {
     "iri" : "http://purl.org/net/p-plan#Variable",
     "baseIri" : "http://purl.org/net/p-plan",
@@ -378,9 +413,9 @@
     "label" : {
       "IRI-based" : "Variable"
     },
-    "subClasses" : [ "30" ],
+    "subClasses" : [ "34" ],
     "attributes" : [ "external" ],
-    "id" : "34"
+    "id" : "38"
   }, {
     "iri" : "http://dockerpedia.inf.utfsm.cl/vocab#ImageVersion",
     "baseIri" : "http://dockerpedia.inf.utfsm.cl/vocab",
@@ -391,8 +426,8 @@
     "comment" : {
       "undefined" : "version of a software image"
     },
-    "id" : "53",
-    "superClasses" : [ "27" ]
+    "id" : "42",
+    "superClasses" : [ "23" ]
   }, {
     "iri" : "http://purl.org/net/wicus-stack#ConfigurationParameter",
     "baseIri" : "http://purl.org/net/wicus-stack",
@@ -404,8 +439,8 @@
       "undefined" : "A wstack:ConfigurationParameter is a specific type of p-plan:Variable. It represents a piece of the configuration information of a deployment step."
     },
     "attributes" : [ "external" ],
-    "id" : "30",
-    "superClasses" : [ "34" ]
+    "id" : "34",
+    "superClasses" : [ "38" ]
   }, {
     "iri" : "http://purl.org/net/wicus-stack#SoftwareStack",
     "baseIri" : "http://purl.org/net/wicus-stack",
@@ -417,7 +452,7 @@
       "undefined" : "A wstack:SoftwareStack represents a set of software components that support the execution of a certain set of tasks of a workflow."
     },
     "attributes" : [ "external" ],
-    "id" : "25"
+    "id" : "32"
   }, {
     "iri" : "http://dockerpedia.inf.utfsm.cl/vocab#SoftwareImage",
     "baseIri" : "http://dockerpedia.inf.utfsm.cl/vocab",
@@ -429,14 +464,13 @@
       "undefined" : "A read-only template that contains a set of instructions for creating a container."
     },
     "id" : "7",
-    "superClasses" : [ "46" ]
+    "superClasses" : [ "44" ]
   }, {
-    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
-    "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
-    "id" : "21",
+    "iri" : "http://www.w3.org/2001/XMLSchema#double",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "69",
     "label" : {
-      "IRI-based" : "Literal",
-      "undefined" : "Literal"
+      "IRI-based" : "double"
     }
   }, {
     "iri" : "http://purl.org/net/wicus-stack#Version",
@@ -445,16 +479,23 @@
     "label" : {
       "IRI-based" : "Version"
     },
-    "subClasses" : [ "53", "41" ],
+    "subClasses" : [ "42", "22" ],
     "comment" : {
       "undefined" : "A wicussstack:Version represents a concrete version of a software component."
     },
     "attributes" : [ "external" ],
-    "id" : "27"
+    "id" : "23"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "85",
+    "label" : {
+      "IRI-based" : "string"
+    }
   }, {
     "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
     "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
-    "id" : "59",
+    "id" : "25",
     "label" : {
       "IRI-based" : "Literal",
       "undefined" : "Literal"
@@ -462,7 +503,7 @@
   }, {
     "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
     "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
-    "id" : "72",
+    "id" : "61",
     "label" : {
       "IRI-based" : "Literal",
       "undefined" : "Literal"
@@ -470,7 +511,7 @@
   }, {
     "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
     "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
-    "id" : "23",
+    "id" : "76",
     "label" : {
       "IRI-based" : "Literal",
       "undefined" : "Literal"
@@ -478,7 +519,15 @@
   }, {
     "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
     "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
-    "id" : "82",
+    "id" : "28",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
+    "id" : "87",
     "label" : {
       "IRI-based" : "Literal",
       "undefined" : "Literal"
@@ -486,15 +535,10 @@
   }, {
     "iri" : "http://www.w3.org/2002/07/owl#Thing",
     "baseIri" : "http://owl2vowl.de",
-    "id" : "74",
+    "id" : "78",
     "label" : {
       "undefined" : "Thing"
     }
-  }, {
-    "instances" : 0,
-    "union" : [ "41", "27" ],
-    "attributes" : [ "union", "anonymous" ],
-    "id" : "19"
   }, {
     "iri" : "http://purl.org/dc/elements/1.1/identifier",
     "baseIri" : "http://purl.org/dc/elements/1.1",
@@ -507,11 +551,11 @@
       "undefined" : "A name that identifies either a unique object or a unique class of objects."
     },
     "attributes" : [ "external" ],
-    "id" : "45"
+    "id" : "20"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "86",
+    "id" : "90",
     "label" : {
       "IRI-based" : "string"
     }
@@ -525,7 +569,7 @@
     "comment" : {
       "undefined" : "A layer of a Docker image are a set files generated from running a command from a DockerFile."
     },
-    "id" : "65"
+    "id" : "56"
   }, {
     "iri" : "http://dockerpedia.inf.utfsm.cl/vocab#SecurityRevision",
     "baseIri" : "http://dockerpedia.inf.utfsm.cl/vocab",
@@ -536,7 +580,7 @@
     "comment" : {
       "undefined" : "security revision of a software package"
     },
-    "id" : "51"
+    "id" : "53"
   }, {
     "iri" : "http://purl.org/net/p-plan#Plan",
     "baseIri" : "http://purl.org/net/p-plan",
@@ -557,7 +601,7 @@
     "comment" : {
       "undefined" : "A modification of a layer in a DockerFile"
     },
-    "id" : "94"
+    "id" : "99"
   } ],
   "property" : [ {
     "id" : "0",
@@ -566,89 +610,80 @@
     "id" : "6",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "8",
+    "id" : "13",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "14",
+    "id" : "15",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "16",
+    "id" : "17",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "18",
-    "type" : "owl:objectProperty"
+    "id" : "19",
+    "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "20",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "22",
-    "type" : "owl:datatypeProperty"
+    "id" : "21",
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "24",
-    "type" : "owl:objectProperty"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "26",
-    "type" : "owl:objectProperty"
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "27",
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "29",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "33",
-    "type" : "rdfs:SubClassOf"
+    "id" : "31",
+    "type" : "owl:objectProperty"
   }, {
-    "id" : "35",
-    "type" : "rdfs:SubClassOf"
+    "id" : "33",
+    "type" : "owl:objectProperty"
   }, {
     "id" : "37",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "38",
+    "id" : "39",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "41",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "43",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "44",
-    "type" : "rdfs:SubClassOf"
-  }, {
     "id" : "47",
-    "type" : "owl:objectProperty"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "48",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "49",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "50",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "52",
+    "id" : "50",
     "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "52",
+    "type" : "owl:objectProperty"
   }, {
     "id" : "54",
     "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "55",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "56",
-    "type" : "owl:objectProperty"
   }, {
     "id" : "57",
     "type" : "owl:objectProperty"
   }, {
     "id" : "58",
-    "type" : "owl:datatypeProperty"
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "59",
+    "type" : "owl:objectProperty"
   }, {
     "id" : "60",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "28",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "61",
-    "type" : "owl:objectProperty"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "62",
     "type" : "owl:objectProperty"
@@ -656,7 +691,13 @@
     "id" : "63",
     "type" : "owl:objectProperty"
   }, {
+    "id" : "30",
+    "type" : "owl:objectProperty"
+  }, {
     "id" : "64",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "65",
     "type" : "owl:objectProperty"
   }, {
     "id" : "66",
@@ -665,22 +706,19 @@
     "id" : "67",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "71",
+    "id" : "68",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "73",
+    "id" : "70",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "74",
     "type" : "owl:objectProperty"
   }, {
     "id" : "75",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "76",
-    "type" : "owl:objectProperty"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "77",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "78",
     "type" : "owl:objectProperty"
   }, {
     "id" : "79",
@@ -692,26 +730,23 @@
     "id" : "81",
     "type" : "owl:objectProperty"
   }, {
+    "id" : "82",
+    "type" : "owl:objectProperty"
+  }, {
     "id" : "83",
-    "type" : "rdfs:SubClassOf"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "84",
-    "type" : "owl:datatypeProperty"
+    "type" : "owl:objectProperty"
   }, {
-    "id" : "85",
-    "type" : "owl:disjointWith"
-  }, {
-    "id" : "87",
+    "id" : "86",
     "type" : "owl:objectProperty"
   }, {
     "id" : "88",
-    "type" : "owl:objectProperty"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "89",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "90",
-    "type" : "owl:objectProperty"
+    "type" : "owl:disjointWith"
   }, {
     "id" : "91",
     "type" : "owl:objectProperty"
@@ -720,9 +755,24 @@
     "type" : "owl:objectProperty"
   }, {
     "id" : "93",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "94",
     "type" : "owl:objectProperty"
   }, {
     "id" : "95",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "96",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "97",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "98",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "100",
     "type" : "owl:objectProperty"
   } ],
   "propertyAttribute" : [ {
@@ -737,7 +787,7 @@
     "comment" : {
       "undefined" : "wstack:isDeploymentStepOf is a specific type of p-plan:isStepOfPlan linking a wstack:DeploymentStep to the wstack:DeploymentPaln that it belongs to."
     },
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "0"
   }, {
     "iri" : "http://dockerpedia.inf.utfsm.cl/vocab#imageIdentifier",
@@ -753,61 +803,58 @@
     "attributes" : [ "object" ],
     "id" : "6"
   }, {
-    "iri" : "http://dockerpedia.inf.utfsm.cl/vocab#containPackages",
-    "baseIri" : "http://dockerpedia.inf.utfsm.cl/vocab",
-    "range" : "9",
-    "label" : {
-      "IRI-based" : "containPackages"
-    },
-    "domain" : "7",
-    "comment" : {
-      "undefined" : "a software image contains several packages"
-    },
-    "attributes" : [ "object" ],
-    "id" : "8"
-  }, {
     "iri" : "http://dockerpedia.inf.utfsm.cl/vocab#isAffectedBy",
     "baseIri" : "http://dockerpedia.inf.utfsm.cl/vocab",
-    "range" : "15",
+    "range" : "14",
     "label" : {
       "IRI-based" : "isAffectedBy"
     },
-    "domain" : "10",
+    "domain" : "8",
     "comment" : {
       "undefined" : "Operating Systems are affected by software vulnerabilities"
     },
     "attributes" : [ "object" ],
-    "id" : "14"
+    "id" : "13"
   }, {
     "iri" : "http://dockerpedia.inf.utfsm.cl/vocab#hasFileSystem",
     "baseIri" : "http://dockerpedia.inf.utfsm.cl/vocab",
-    "range" : "17",
+    "range" : "16",
     "label" : {
       "IRI-based" : "hasFileSystem"
     },
-    "domain" : "10",
+    "domain" : "8",
     "comment" : {
       "undefined" : "An OS has a file system in which install software"
     },
     "attributes" : [ "object" ],
-    "id" : "16"
+    "id" : "15"
   }, {
     "iri" : "http://purl.org/net/wicus-stack#hasVersion",
     "baseIri" : "http://purl.org/net/wicus-stack",
-    "range" : "19",
+    "range" : "18",
     "label" : {
       "IRI-based" : "hasVersion"
     },
-    "domain" : "13",
+    "domain" : "9",
     "comment" : {
       "undefined" : "wstack:hasVersion links a wstack:SoftwareComponent to the its wstack:Version"
     },
-    "attributes" : [ "object", "external", "functional" ],
-    "id" : "18"
+    "attributes" : [ "external", "object", "functional" ],
+    "id" : "17"
+  }, {
+    "range" : "20",
+    "domain" : "6",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "19"
+  }, {
+    "range" : "23",
+    "domain" : "22",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "21"
   }, {
     "iri" : "http://purl.org/net/wicus-stack#binary",
     "baseIri" : "http://purl.org/net/wicus-stack",
-    "range" : "21",
+    "range" : "25",
     "label" : {
       "IRI-based" : "binary"
     },
@@ -816,11 +863,16 @@
       "undefined" : "wstack:binary defines the location of the binary package of a wstack:SoftwareComponent"
     },
     "attributes" : [ "datatype", "external" ],
-    "id" : "20"
+    "id" : "24"
+  }, {
+    "range" : "5",
+    "domain" : "2",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "26"
   }, {
     "iri" : "http://purl.org/net/wicus-stack#script",
     "baseIri" : "http://purl.org/net/wicus-stack",
-    "range" : "23",
+    "range" : "28",
     "label" : {
       "IRI-based" : "script"
     },
@@ -829,82 +881,82 @@
       "undefined" : "wstack:script defines the name and/or location of and script."
     },
     "attributes" : [ "datatype", "external" ],
-    "id" : "22"
-  }, {
-    "iri" : "http://purl.org/net/wicus-stack#dependsOn",
-    "baseIri" : "http://purl.org/net/wicus-stack",
-    "range" : "25",
-    "label" : {
-      "IRI-based" : "dependsOn"
-    },
-    "domain" : "25",
-    "comment" : {
-      "undefined" : "wstack:dependsOn links a wstack:SoftwareStack to another wstack:SoftwareStack that is necessary for deploying and running the first one."
-    },
-    "attributes" : [ "object", "external" ],
-    "id" : "24"
+    "id" : "27"
   }, {
     "iri" : "http://purl.org/net/wicus-stack#lower",
-    "inverse" : "28",
+    "inverse" : "30",
     "baseIri" : "http://purl.org/net/wicus-stack",
-    "range" : "27",
+    "range" : "23",
     "label" : {
       "IRI-based" : "lower"
     },
-    "domain" : "27",
+    "domain" : "23",
     "comment" : {
       "undefined" : "wstack:lower links a wstack:Version to another one that is higher than the first one."
     },
-    "attributes" : [ "object", "external" ],
-    "id" : "26"
+    "attributes" : [ "external", "object" ],
+    "id" : "29"
+  }, {
+    "iri" : "http://purl.org/net/wicus-stack#dependsOn",
+    "baseIri" : "http://purl.org/net/wicus-stack",
+    "range" : "32",
+    "label" : {
+      "IRI-based" : "dependsOn"
+    },
+    "domain" : "32",
+    "comment" : {
+      "undefined" : "wstack:dependsOn links a wstack:SoftwareStack to another wstack:SoftwareStack that is necessary for deploying and running the first one."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "31"
   }, {
     "iri" : "http://purl.org/net/wicus-stack#isConfigurationParameterOf",
     "baseIri" : "http://purl.org/net/wicus-stack",
-    "range" : "31",
+    "range" : "35",
     "label" : {
       "IRI-based" : "isConfigurationParameterOf"
     },
-    "superproperty" : [ "32" ],
-    "domain" : "30",
+    "superproperty" : [ "36" ],
+    "domain" : "34",
     "comment" : {
       "undefined" : "wstack:isConfigurationParameterOf is a specific type of p-plan:isInputVarOf linking a wstack:ConfigurationParameter to the wstack:ConfigurationInformation that it belongs to."
     },
-    "attributes" : [ "object", "external" ],
-    "id" : "29"
-  }, {
-    "range" : "34",
-    "domain" : "30",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "external", "object" ],
     "id" : "33"
   }, {
-    "range" : "36",
-    "domain" : "1",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "35"
-  }, {
-    "range" : "5",
-    "domain" : "2",
-    "attributes" : [ "object", "anonymous" ],
+    "range" : "38",
+    "domain" : "34",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "37"
   }, {
     "range" : "40",
-    "domain" : "39",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "38"
+    "domain" : "1",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "39"
   }, {
-    "range" : "27",
-    "domain" : "41",
-    "attributes" : [ "object", "anonymous" ],
+    "range" : "23",
+    "domain" : "42",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "41"
+  }, {
+    "range" : "44",
+    "domain" : "7",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "43"
   }, {
-    "range" : "45",
-    "domain" : "6",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "44"
+    "range" : "11",
+    "domain" : "12",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "47"
+  }, {
+    "range" : "46",
+    "domain" : "45",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "48"
   }, {
     "iri" : "http://purl.org/net/wicus-stack#hasDeploymentInfo",
     "baseIri" : "http://purl.org/net/wicus-stack",
-    "range" : "31",
+    "range" : "35",
     "label" : {
       "IRI-based" : "hasDeploymentInfo"
     },
@@ -912,40 +964,30 @@
     "comment" : {
       "undefined" : "wstack:hasDeploymentInfo links a wstack:DeploymentStep to a wstack:ConfigurationInfo representing the input values for executing a deployment step."
     },
-    "attributes" : [ "object", "external" ],
-    "id" : "47"
-  }, {
-    "range" : "40",
-    "domain" : "42",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "48"
-  }, {
-    "range" : "13",
-    "domain" : "9",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "external", "object" ],
     "id" : "49"
+  }, {
+    "range" : "46",
+    "domain" : "51",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "50"
   }, {
     "iri" : "http://dockerpedia.inf.utfsm.cl/vocab#fixVulnerability",
     "baseIri" : "http://dockerpedia.inf.utfsm.cl/vocab",
-    "range" : "15",
+    "range" : "14",
     "label" : {
       "IRI-based" : "fixVulnerability"
     },
-    "domain" : "51",
+    "domain" : "53",
     "comment" : {
       "undefined" : "a security revision fixes a vulnerability"
     },
     "attributes" : [ "object" ],
-    "id" : "50"
-  }, {
-    "range" : "27",
-    "domain" : "53",
-    "attributes" : [ "object", "anonymous" ],
     "id" : "52"
   }, {
-    "range" : "46",
-    "domain" : "7",
-    "attributes" : [ "object", "anonymous" ],
+    "range" : "9",
+    "domain" : "10",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "54"
   }, {
     "iri" : "http://purl.org/net/wicus-stack#nextStep",
@@ -958,25 +1000,25 @@
     "comment" : {
       "undefined" : "wstack:nextStep specifies the invocation order of two wstack:DeploymentStep."
     },
-    "attributes" : [ "object", "external", "functional" ],
-    "id" : "55"
+    "attributes" : [ "external", "object", "functional" ],
+    "id" : "57"
   }, {
     "iri" : "http://dockerpedia.inf.utfsm.cl/vocab#hasVulnerability",
     "baseIri" : "http://dockerpedia.inf.utfsm.cl/vocab",
-    "range" : "15",
+    "range" : "14",
     "label" : {
       "IRI-based" : "hasVulnerability"
     },
-    "domain" : "41",
+    "domain" : "22",
     "comment" : {
       "undefined" : "One package version may have one or more software vulnerabilities"
     },
     "attributes" : [ "object" ],
-    "id" : "56"
+    "id" : "58"
   }, {
     "iri" : "http://purl.org/net/wicus-stack#isDeploymentPlanOf",
     "baseIri" : "http://purl.org/net/wicus-stack",
-    "range" : "13",
+    "range" : "9",
     "label" : {
       "IRI-based" : "isDeploymentPlanOf"
     },
@@ -984,99 +1026,99 @@
     "comment" : {
       "undefined" : "wstack:hasSoftwareComponent links a wstack:DeploymentPlan to its corresponding wstack:SofwareComponent."
     },
-    "attributes" : [ "object", "external" ],
-    "id" : "57"
+    "attributes" : [ "external", "object" ],
+    "id" : "59"
   }, {
     "iri" : "http://purl.org/net/wicus-stack#parameterName",
     "baseIri" : "http://purl.org/net/wicus-stack",
-    "range" : "59",
+    "range" : "61",
     "label" : {
       "IRI-based" : "parameterName"
     },
-    "domain" : "30",
+    "domain" : "34",
     "comment" : {
       "undefined" : "wstack:parameterName defines the name of a parameter, that is, the symbolic name or identifier of a stored value."
     },
     "attributes" : [ "datatype", "external" ],
-    "id" : "58"
+    "id" : "60"
   }, {
     "iri" : "http://dockerpedia.inf.utfsm.cl/vocab#isPackageOf",
     "baseIri" : "http://dockerpedia.inf.utfsm.cl/vocab",
-    "range" : "10",
+    "range" : "8",
     "label" : {
       "IRI-based" : "isPackageOf"
     },
-    "domain" : "13",
+    "domain" : "9",
     "comment" : {
       "undefined" : "software components are package on an Operating System"
     },
     "attributes" : [ "object" ],
-    "id" : "60"
-  }, {
-    "iri" : "http://purl.org/net/wicus-stack#higher",
-    "baseIri" : "http://purl.org/net/wicus-stack",
-    "range" : "27",
-    "label" : {
-      "IRI-based" : "higher"
-    },
-    "domain" : "27",
-    "comment" : {
-      "undefined" : "wstack:higher links a wstack:Version to another one that is lower than the first one."
-    },
-    "attributes" : [ "object", "external", "transitive" ],
-    "id" : "28"
-  }, {
-    "iri" : "http://dockerpedia.inf.utfsm.cl/vocab#fixPackageVersion",
-    "baseIri" : "http://dockerpedia.inf.utfsm.cl/vocab",
-    "range" : "41",
-    "label" : {
-      "IRI-based" : "fixPackageVersion"
-    },
-    "domain" : "51",
-    "comment" : {
-      "undefined" : "a security revision fixes a package version"
-    },
-    "attributes" : [ "object" ],
-    "id" : "61"
-  }, {
-    "iri" : "http://purl.org/net/wicus-stack#hasLicense",
-    "baseIri" : "http://purl.org/net/wicus-stack",
-    "range" : "40",
-    "label" : {
-      "IRI-based" : "hasLicense"
-    },
-    "domain" : "13",
-    "comment" : {
-      "undefined" : "wstack:hasLicense links a wstack:SoftwareComponent to its corresponding wstack:License"
-    },
-    "attributes" : [ "object", "external" ],
     "id" : "62"
   }, {
-    "iri" : "http://dockerpedia.inf.utfsm.cl/vocab#isVersionOf",
+    "iri" : "http://dockerpedia.inf.utfsm.cl/vocab#containSoftware",
     "baseIri" : "http://dockerpedia.inf.utfsm.cl/vocab",
-    "range" : "13",
+    "range" : "10",
     "label" : {
-      "IRI-based" : "isVersionOf"
+      "IRI-based" : "containSoftware"
     },
-    "domain" : "41",
+    "domain" : "7",
     "comment" : {
-      "undefined" : "a package version is a versuon of a software component"
+      "undefined" : "a software image contains several packages"
     },
     "attributes" : [ "object" ],
     "id" : "63"
   }, {
-    "iri" : "http://dockerpedia.inf.utfsm.cl/vocab#hasLayer",
-    "baseIri" : "http://dockerpedia.inf.utfsm.cl/vocab",
-    "range" : "65",
+    "iri" : "http://purl.org/net/wicus-stack#higher",
+    "baseIri" : "http://purl.org/net/wicus-stack",
+    "range" : "23",
     "label" : {
-      "IRI-based" : "hasLayer"
+      "IRI-based" : "higher"
     },
-    "domain" : "7",
+    "domain" : "23",
     "comment" : {
-      "undefined" : "one software images may be composed of several layers"
+      "undefined" : "wstack:higher links a wstack:Version to another one that is lower than the first one."
+    },
+    "attributes" : [ "transitive", "external", "object" ],
+    "id" : "30"
+  }, {
+    "iri" : "http://dockerpedia.inf.utfsm.cl/vocab#fixPackageVersion",
+    "baseIri" : "http://dockerpedia.inf.utfsm.cl/vocab",
+    "range" : "22",
+    "label" : {
+      "IRI-based" : "fixPackageVersion"
+    },
+    "domain" : "53",
+    "comment" : {
+      "undefined" : "a security revision fixes a package version"
     },
     "attributes" : [ "object" ],
     "id" : "64"
+  }, {
+    "iri" : "http://purl.org/net/wicus-stack#hasLicense",
+    "baseIri" : "http://purl.org/net/wicus-stack",
+    "range" : "46",
+    "label" : {
+      "IRI-based" : "hasLicense"
+    },
+    "domain" : "9",
+    "comment" : {
+      "undefined" : "wstack:hasLicense links a wstack:SoftwareComponent to its corresponding wstack:License"
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "65"
+  }, {
+    "iri" : "http://dockerpedia.inf.utfsm.cl/vocab#isVersionOf",
+    "baseIri" : "http://dockerpedia.inf.utfsm.cl/vocab",
+    "range" : "9",
+    "label" : {
+      "IRI-based" : "isVersionOf"
+    },
+    "domain" : "22",
+    "comment" : {
+      "undefined" : "a package version is a versuon of a software component"
+    },
+    "attributes" : [ "object" ],
+    "id" : "66"
   }, {
     "iri" : "http://purl.org/net/wicus-stack#hasBinary",
     "baseIri" : "http://purl.org/net/wicus-stack",
@@ -1084,63 +1126,83 @@
     "label" : {
       "IRI-based" : "hasBinary"
     },
-    "domain" : "13",
+    "domain" : "9",
     "comment" : {
       "undefined" : "wstack:hasBinary links a wstack:SoftwareComponent to its corresponding wstack:SoftwareBinary."
     },
-    "attributes" : [ "object", "external" ],
-    "id" : "66"
+    "attributes" : [ "external", "object" ],
+    "id" : "67"
+  }, {
+    "iri" : "http://dockerpedia.inf.utfsm.cl/vocab#size",
+    "baseIri" : "http://dockerpedia.inf.utfsm.cl/vocab",
+    "range" : "69",
+    "label" : {
+      "IRI-based" : "size"
+    },
+    "domain" : "7",
+    "attributes" : [ "datatype" ],
+    "id" : "68"
   }, {
     "iri" : "http://purl.org/net/wicus-stack#requiresVersion",
     "baseIri" : "http://purl.org/net/wicus-stack",
-    "range" : "27",
+    "range" : "23",
     "label" : {
       "IRI-based" : "requiresVersion"
     },
-    "superproperty" : [ "68" ],
-    "domain" : "13",
-    "subproperty" : [ "69", "70" ],
+    "superproperty" : [ "71" ],
+    "domain" : "9",
+    "subproperty" : [ "72", "73" ],
     "comment" : {
       "undefined" : "wstack:requiresVersion links a wstack:SoftwareComponent to the wstack:Version required by this component on the context of a workflow."
     },
-    "attributes" : [ "object", "external" ],
-    "id" : "67"
+    "attributes" : [ "external", "object" ],
+    "id" : "70"
+  }, {
+    "iri" : "http://dockerpedia.inf.utfsm.cl/vocab#isInstalledOn",
+    "baseIri" : "http://dockerpedia.inf.utfsm.cl/vocab",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "isInstalledOn"
+    },
+    "domain" : "22",
+    "attributes" : [ "object" ],
+    "id" : "74"
   }, {
     "iri" : "http://purl.org/net/wicus-stack#parameterValue",
     "baseIri" : "http://purl.org/net/wicus-stack",
-    "range" : "72",
+    "range" : "76",
     "label" : {
       "IRI-based" : "parameterValue"
     },
-    "domain" : "30",
+    "domain" : "34",
     "comment" : {
       "undefined" : "wstack:parameterValue defines the value of a parameter."
     },
     "attributes" : [ "datatype", "external" ],
-    "id" : "71"
+    "id" : "75"
   }, {
     "iri" : "http://dockerpedia.inf.utfsm.cl/vocab#isPresent",
     "baseIri" : "http://dockerpedia.inf.utfsm.cl/vocab",
-    "range" : "74",
+    "range" : "78",
     "label" : {
       "IRI-based" : "isPresent"
     },
-    "domain" : "74",
+    "domain" : "78",
     "attributes" : [ "object" ],
-    "id" : "73"
+    "id" : "77"
   }, {
     "iri" : "http://dockerpedia.inf.utfsm.cl/vocab#deployedOn",
     "baseIri" : "http://dockerpedia.inf.utfsm.cl/vocab",
-    "range" : "17",
+    "range" : "16",
     "label" : {
       "IRI-based" : "deployedOn"
     },
-    "domain" : "9",
+    "domain" : "10",
     "comment" : {
       "undefined" : "software images deploy on FileSystems"
     },
     "attributes" : [ "object" ],
-    "id" : "75"
+    "id" : "79"
   }, {
     "iri" : "http://dockerpedia.inf.utfsm.cl/vocab#hasImage",
     "baseIri" : "http://dockerpedia.inf.utfsm.cl/vocab",
@@ -1153,160 +1215,165 @@
       "undefined" : "A docker file has software images"
     },
     "attributes" : [ "object" ],
-    "id" : "76"
+    "id" : "80"
   }, {
     "iri" : "http://dockerpedia.inf.utfsm.cl/vocab#hasRevision",
     "baseIri" : "http://dockerpedia.inf.utfsm.cl/vocab",
-    "range" : "51",
+    "range" : "53",
     "label" : {
       "IRI-based" : "hasRevision"
     },
-    "domain" : "41",
+    "domain" : "22",
     "comment" : {
       "undefined" : "one package version may have a security revision fixing some vulnerability"
     },
     "attributes" : [ "object" ],
-    "id" : "77"
+    "id" : "81"
   }, {
     "iri" : "http://purl.org/net/wicus-stack#nextComponent",
     "baseIri" : "http://purl.org/net/wicus-stack",
-    "range" : "13",
+    "range" : "9",
     "label" : {
       "IRI-based" : "nextComponent"
     },
-    "domain" : "13",
+    "domain" : "9",
     "comment" : {
       "undefined" : "wstack:nextComponent specifies the deployment order of two wstack:SoftwareComponent."
     },
-    "attributes" : [ "object", "external" ],
-    "id" : "78"
+    "attributes" : [ "external", "object" ],
+    "id" : "82"
   }, {
     "iri" : "http://dockerpedia.inf.utfsm.cl/vocab#isLayerOf",
     "baseIri" : "http://dockerpedia.inf.utfsm.cl/vocab",
-    "range" : "46",
+    "range" : "55",
     "label" : {
       "IRI-based" : "isLayerOf"
     },
-    "domain" : "65",
+    "domain" : "56",
     "comment" : {
       "undefined" : "one software layer is part of a software image"
     },
     "attributes" : [ "object" ],
-    "id" : "79"
+    "id" : "83"
   }, {
     "iri" : "http://dockerpedia.inf.utfsm.cl/vocab#affectsOS",
     "baseIri" : "http://dockerpedia.inf.utfsm.cl/vocab",
-    "range" : "10",
+    "range" : "8",
     "label" : {
       "IRI-based" : "affectsOS"
     },
-    "domain" : "15",
+    "domain" : "14",
     "comment" : {
       "undefined" : "a vulnerability that is present in an operating system"
     },
     "attributes" : [ "object" ],
-    "id" : "80"
+    "id" : "84"
   }, {
     "iri" : "http://dockerpedia.inf.utfsm.cl/vocab#usesOS",
     "baseIri" : "http://dockerpedia.inf.utfsm.cl/vocab",
-    "range" : "10",
+    "range" : "8",
     "label" : {
       "IRI-based" : "usesOS"
     },
-    "domain" : "65",
+    "domain" : "56",
     "comment" : {
       "undefined" : "a software layer use an Operating System"
     },
     "attributes" : [ "object" ],
-    "id" : "81"
-  }, {
-    "range" : "11",
-    "domain" : "12",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "83"
+    "id" : "86"
   }, {
     "iri" : "http://purl.org/net/wicus-stack#versionNumber",
     "baseIri" : "http://purl.org/net/wicus-stack",
-    "range" : "82",
+    "range" : "87",
     "label" : {
       "IRI-based" : "versionNumber"
     },
-    "domain" : "27",
+    "domain" : "23",
     "comment" : {
       "undefined" : "wstack:versionNumer defines the identifier of a version, usually as a numeric value, and sometimes a code name or an acronym."
     },
     "attributes" : [ "datatype", "external" ],
-    "id" : "84"
+    "id" : "88"
   }, {
-    "range" : "42",
-    "domain" : "39",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "85"
+    "range" : "45",
+    "domain" : "51",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "89"
   }, {
     "iri" : "http://purl.org/net/wicus-stack#hasSoftwareComponent",
     "baseIri" : "http://purl.org/net/wicus-stack",
-    "range" : "13",
+    "range" : "9",
     "label" : {
       "IRI-based" : "hasSoftwareComponent"
     },
-    "domain" : "25",
+    "domain" : "32",
     "comment" : {
       "undefined" : "wstack:hasSoftwareComponent links a wstack:SoftwareStack to one or more wstack:SofwareComponent that composes the stack."
     },
-    "attributes" : [ "object", "external" ],
-    "id" : "87"
+    "attributes" : [ "external", "object" ],
+    "id" : "91"
   }, {
     "iri" : "http://dockerpedia.inf.utfsm.cl/vocab#isModifiedBy",
     "baseIri" : "http://dockerpedia.inf.utfsm.cl/vocab",
-    "range" : "41",
+    "range" : "22",
     "label" : {
       "IRI-based" : "isModifiedBy"
     },
-    "domain" : "65",
+    "domain" : "56",
     "comment" : {
       "undefined" : "an image layer modifies a package version"
     },
     "attributes" : [ "object" ],
-    "id" : "88"
+    "id" : "92"
+  }, {
+    "iri" : "http://dockerpedia.inf.utfsm.cl/vocab#tag",
+    "baseIri" : "http://dockerpedia.inf.utfsm.cl/vocab",
+    "range" : "85",
+    "label" : {
+      "IRI-based" : "tag"
+    },
+    "domain" : "7",
+    "attributes" : [ "datatype" ],
+    "id" : "93"
   }, {
     "iri" : "http://dockerpedia.inf.utfsm.cl/vocab#modifyLayer",
     "baseIri" : "http://dockerpedia.inf.utfsm.cl/vocab",
-    "range" : "65",
+    "range" : "56",
     "label" : {
       "IRI-based" : "modifyLayer"
     },
-    "domain" : "41",
+    "domain" : "22",
     "comment" : {
       "undefined" : "a package version modifies a layer"
     },
     "attributes" : [ "object" ],
-    "id" : "89"
+    "id" : "94"
   }, {
     "iri" : "http://dockerpedia.inf.utfsm.cl/vocab#hasPackages",
     "baseIri" : "http://dockerpedia.inf.utfsm.cl/vocab",
-    "range" : "9",
+    "range" : "10",
     "label" : {
       "IRI-based" : "hasPackages"
     },
-    "domain" : "10",
+    "domain" : "8",
     "comment" : {
       "undefined" : "one OS may have installed several software packages on it"
     },
     "attributes" : [ "object" ],
-    "id" : "90"
+    "id" : "95"
   }, {
     "iri" : "http://purl.org/net/wicus-stack#hasConfigurationInfo",
     "baseIri" : "http://purl.org/net/wicus-stack",
-    "range" : "31",
+    "range" : "35",
     "label" : {
       "IRI-based" : "hasConfigurationInfo"
     },
-    "domain" : "13",
+    "domain" : "9",
     "comment" : {
       "undefined" : "wstack:hasConfigurationInfo links a wstack:SoftwareComponent to a wstack:ConfigurationInfo representing the information for configuring it."
     },
-    "attributes" : [ "object", "external" ],
-    "id" : "91"
+    "attributes" : [ "external", "object" ],
+    "id" : "96"
   }, {
     "iri" : "http://dockerpedia.inf.utfsm.cl/vocab#builds",
     "baseIri" : "http://dockerpedia.inf.utfsm.cl/vocab",
@@ -1319,11 +1386,11 @@
       "undefined" : "A DockerFile builds a SoftwareImage since the DockerFile is a description of that image"
     },
     "attributes" : [ "object" ],
-    "id" : "92"
+    "id" : "97"
   }, {
     "iri" : "http://dockerpedia.inf.utfsm.cl/vocab#composedBy",
     "baseIri" : "http://dockerpedia.inf.utfsm.cl/vocab",
-    "range" : "65",
+    "range" : "56",
     "label" : {
       "IRI-based" : "composedBy"
     },
@@ -1332,7 +1399,7 @@
       "undefined" : "One Software image may be composed of several layers"
     },
     "attributes" : [ "object" ],
-    "id" : "93"
+    "id" : "98"
   }, {
     "iri" : "http://purl.org/net/wicus-stack#hasDeploymentScript",
     "baseIri" : "http://purl.org/net/wicus-stack",
@@ -1344,7 +1411,7 @@
     "comment" : {
       "undefined" : "wstack:hasDeploymentScript links a wstack:DeploymentStep to a wstack:DeploymentScript that is invoked for executing the deployment step."
     },
-    "attributes" : [ "object", "external", "functional" ],
-    "id" : "95"
+    "attributes" : [ "external", "object", "functional" ],
+    "id" : "100"
   } ]
 }

@@ -218,7 +218,7 @@ This section provides details for each class and property defined by The DockerP
          <dt>is in range of</dt>
          <dd>
             <a href="#composedBy" title="http://dockerpedia.inf.utfsm.cl/vocab#composedBy">composed by</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#hasLayer" title="http://dockerpedia.inf.utfsm.cl/vocab#hasLayer">has layer</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#isLayerOf" title="http://dockerpedia.inf.utfsm.cl/vocab#isLayerOf">is layer of</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#modifyLayer"
                title="http://dockerpedia.inf.utfsm.cl/vocab#modifyLayer">modify layer</a>
             <sup class="type-op" title="object property">op</sup>
@@ -309,6 +309,8 @@ This section provides details for each class and property defined by The DockerP
                title="http://dockerpedia.inf.utfsm.cl/vocab#hasRevision">has revision</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#hasVulnerability"
                title="http://dockerpedia.inf.utfsm.cl/vocab#hasVulnerability">has vulnerability</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#isInstalledOn"
+               title="http://dockerpedia.inf.utfsm.cl/vocab#isInstalledOn">is installed on</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#isVersionOf"
                title="http://dockerpedia.inf.utfsm.cl/vocab#isVersionOf">is version of</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#modifyLayer"
@@ -371,17 +373,20 @@ This section provides details for each class and property defined by The DockerP
          <dt>is in domain of</dt>
          <dd>
             <a href="#composedBy" title="http://dockerpedia.inf.utfsm.cl/vocab#composedBy">composed by</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#containPackages"
-               title="http://dockerpedia.inf.utfsm.cl/vocab#containPackages">contain packages</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#hasLayer" title="http://dockerpedia.inf.utfsm.cl/vocab#hasLayer">has layer</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#containSoftware"
+               title="http://dockerpedia.inf.utfsm.cl/vocab#containSoftware">contain software</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#imageIdentifier"
                title="http://dockerpedia.inf.utfsm.cl/vocab#imageIdentifier">image identifier</a>
-            <sup class="type-op" title="object property">op</sup>
+            <sup class="type-op" title="object property">op</sup>, <a href="#size" title="http://dockerpedia.inf.utfsm.cl/vocab#size">size</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#tag" title="http://dockerpedia.inf.utfsm.cl/vocab#tag">tag</a>
+            <sup class="type-dp" title="data property">dp</sup>
          </dd>
          <dt>is in range of</dt>
          <dd>
             <a href="#builds" title="http://dockerpedia.inf.utfsm.cl/vocab#builds">builds</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#hasImage" title="http://dockerpedia.inf.utfsm.cl/vocab#hasImage">has image</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#isInstalledOn"
+               title="http://dockerpedia.inf.utfsm.cl/vocab#isInstalledOn">is installed on</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
@@ -410,8 +415,8 @@ This section provides details for each class and property defined by The DockerP
          </dd>
          <dt>is in range of</dt>
          <dd>
-            <a href="#containPackages"
-               title="http://dockerpedia.inf.utfsm.cl/vocab#containPackages">contain packages</a>
+            <a href="#containSoftware"
+               title="http://dockerpedia.inf.utfsm.cl/vocab#containSoftware">contain software</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#hasPackages"
                title="http://dockerpedia.inf.utfsm.cl/vocab#hasPackages">has packages</a>
             <sup class="type-op" title="object property">op</sup>
@@ -465,9 +470,9 @@ This section provides details for each class and property defined by The DockerP
          </a>
       </li>
       <li>
-         <a href="#containPackages"
-            title="http://dockerpedia.inf.utfsm.cl/vocab#containPackages">
-            <span>contain packages</span>
+         <a href="#containSoftware"
+            title="http://dockerpedia.inf.utfsm.cl/vocab#containSoftware">
+            <span>contain software</span>
          </a>
       </li>
       <li>
@@ -499,11 +504,6 @@ This section provides details for each class and property defined by The DockerP
          </a>
       </li>
       <li>
-         <a href="#hasLayer" title="http://dockerpedia.inf.utfsm.cl/vocab#hasLayer">
-            <span>has layer</span>
-         </a>
-      </li>
-      <li>
          <a href="#hasPackages"
             title="http://dockerpedia.inf.utfsm.cl/vocab#hasPackages">
             <span>has packages</span>
@@ -531,6 +531,12 @@ This section provides details for each class and property defined by The DockerP
          <a href="#isAffectedBy"
             title="http://dockerpedia.inf.utfsm.cl/vocab#isAffectedBy">
             <span>is affected by</span>
+         </a>
+      </li>
+      <li>
+         <a href="#isInstalledOn"
+            title="http://dockerpedia.inf.utfsm.cl/vocab#isInstalledOn">
+            <span>is installed on</span>
          </a>
       </li>
       <li>
@@ -647,13 +653,13 @@ This section provides details for each class and property defined by The DockerP
          </dl>
       </div>
    </div>
-   <div class="entity" id="containPackages">
-      <h3>contain packages<sup class="type-op" title="object property">op</sup>
+   <div class="entity" id="containSoftware">
+      <h3>contain software<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://dockerpedia.inf.utfsm.cl/vocab#containPackages</p>
+         <strong>IRI:</strong> http://dockerpedia.inf.utfsm.cl/vocab#containSoftware</p>
       <div class="comment">
          <span class="markdown">a software image contains several packages</span>
       </div>
@@ -806,32 +812,6 @@ This section provides details for each class and property defined by The DockerP
          </dl>
       </div>
    </div>
-   <div class="entity" id="hasLayer">
-      <h3>has layer<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://dockerpedia.inf.utfsm.cl/vocab#hasLayer</p>
-      <div class="comment">
-         <span class="markdown">one software images may be composed of several layers</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#SoftwareImage"
-                  title="http://dockerpedia.inf.utfsm.cl/vocab#SoftwareImage">software image</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="#ImageLayer" title="http://dockerpedia.inf.utfsm.cl/vocab#ImageLayer">image layer</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
    <div class="entity" id="hasPackages">
       <h3>has packages<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -968,6 +948,30 @@ This section provides details for each class and property defined by The DockerP
          </dl>
       </div>
    </div>
+   <div class="entity" id="isInstalledOn">
+      <h3>is installed on<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://dockerpedia.inf.utfsm.cl/vocab#isInstalledOn</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#PackageVersion"
+                  title="http://dockerpedia.inf.utfsm.cl/vocab#PackageVersion">package version</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#SoftwareImage"
+                  title="http://dockerpedia.inf.utfsm.cl/vocab#SoftwareImage">software image</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="isLayerOf">
       <h3>is layer of<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -988,6 +992,10 @@ This section provides details for each class and property defined by The DockerP
             <dt>has range</dt>
             <dd>
                <a href="#Image" title="http://dockerpedia.inf.utfsm.cl/vocab#Image">image</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dd>
+               <a href="#ImageLayer" title="http://dockerpedia.inf.utfsm.cl/vocab#ImageLayer">image layer</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -1134,6 +1142,16 @@ This section provides details for each class and property defined by The DockerP
             <span>image identifier</span>
          </a>
       </li>
+      <li>
+         <a href="#size" title="http://dockerpedia.inf.utfsm.cl/vocab#size">
+            <span>size</span>
+         </a>
+      </li>
+      <li>
+         <a href="#tag" title="http://dockerpedia.inf.utfsm.cl/vocab#tag">
+            <span>tag</span>
+         </a>
+      </li>
    </ul>
    <div class="entity" id="imageIdentifier">
       <h3>image identifier<sup class="type-op" title="object property">op</sup>
@@ -1153,6 +1171,54 @@ This section provides details for each class and property defined by The DockerP
             <dt>is also defined as</dt>
             <dd>
                <a href="#imageIdentifier">object property</a>, <a href="#imageIdentifier">class</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="size">
+      <h3>size<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://dockerpedia.inf.utfsm.cl/vocab#size</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#SoftwareImage"
+                  title="http://dockerpedia.inf.utfsm.cl/vocab#SoftwareImage">software image</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#double"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#double">double</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="tag">
+      <h3>tag<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://dockerpedia.inf.utfsm.cl/vocab#tag</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#SoftwareImage"
+                  title="http://dockerpedia.inf.utfsm.cl/vocab#SoftwareImage">software image</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
             </dd>
          </dl>
       </div>
