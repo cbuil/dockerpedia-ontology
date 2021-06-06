@@ -2,15 +2,25 @@
   "@id" : "http://dockerpedia.inf.utfsm.cl/vocab",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
-    "@language" : "es",
-    "@value" : "Hernán Vargas"
+    "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "@value" : "Daniel Garijo"
+  }, {
+    "@value" : "Maximiliano Osorio"
   }, {
     "@value" : "Carlos Buil-Aranda"
   }, {
-    "@value" : "Maximiliano Osorio"
+    "@language" : "es",
+    "@value" : "Hernán Vargas"
+  }, {
+    "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "@value" : "Idafen Santana"
   } ],
   "http://purl.org/dc/elements/1.1/title" : [ {
     "@value" : "The DockerPedia Ontology"
+  } ],
+  "http://purl.org/dc/terms/license" : [ {
+    "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "@value" : "The MIT License (MIT)\nCopyright © 2021, Maximiliano Osorio, Carlos Buil, Hernán Vargas, Daniel Garijo, Idafen Santana.\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE."
   } ],
   "http://purl.org/vocab/vann/preferredNamespacePrefix" : [ {
     "@value" : "dp"
@@ -151,7 +161,7 @@
     "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#ImageLayer"
   } ]
 }, {
-  "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#containPackages",
+  "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#containSoftware",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "a software image contains several packages"
@@ -223,18 +233,6 @@
     "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#SoftwareImage"
   } ]
 }, {
-  "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#hasLayer",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "one software images may be composed of several layers"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#SoftwareImage"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#ImageLayer"
-  } ]
-}, {
   "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#hasPackages",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -274,9 +272,9 @@
   "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#imageIdentifier",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "An identifier of a software image"
-  }, {
     "@value" : "software images have identifiers"
+  }, {
+    "@value" : "An identifier of a software image"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#SoftwareImage"
@@ -302,6 +300,15 @@
     "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#SoftwareVulnerability"
   } ]
 }, {
+  "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#isInstalledOn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#PackageVersion"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#SoftwareImage"
+  } ]
+}, {
   "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#isLayerOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -312,6 +319,8 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#Image"
+  }, {
+    "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#ImageLayer"
   } ]
 }, {
   "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#isModifiedBy",
@@ -365,6 +374,24 @@
     "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#ImageLayer"
   } ]
 }, {
+  "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#size",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#SoftwareImage"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#double"
+  } ]
+}, {
+  "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#tag",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#SoftwareImage"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
   "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#usesOS",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -386,5 +413,10 @@
   "@id" : "http://purl.org/net/wicus-stack#hasVersion",
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#PackageVersion"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#SoftwareVulnerability"
   } ]
 } ]
