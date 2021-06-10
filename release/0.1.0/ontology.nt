@@ -6,10 +6,11 @@
 <http://dockerpedia.inf.utfsm.cl/vocab> <http://purl.org/dc/elements/1.1/creator> "Carlos Buil-Aranda" .
 <http://dockerpedia.inf.utfsm.cl/vocab> <http://purl.org/dc/elements/1.1/creator> "Maximiliano Osorio" .
 <http://dockerpedia.inf.utfsm.cl/vocab> <http://purl.org/dc/elements/1.1/title> "The DockerPedia Ontology" .
+<http://dockerpedia.inf.utfsm.cl/vocab> <http://purl.org/dc/terms/description> "This ontology describes Docker and its components for virtualizing software."^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
 <http://dockerpedia.inf.utfsm.cl/vocab> <http://purl.org/dc/terms/license> "The MIT License (MIT)\nCopyright © 2021, Maximiliano Osorio, Carlos Buil, Hernán Vargas, Daniel Garijo, Idafen Santana.\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE."^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
-<http://dockerpedia.inf.utfsm.cl/vocab> <http://purl.org/vocab/vann/preferredNamespacePrefix> "dp" .
 <http://dockerpedia.inf.utfsm.cl/vocab> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://dockerpedia.inf.utfsm.cl/vocab#" .
 <http://dockerpedia.inf.utfsm.cl/vocab> <http://www.w3.org/2000/01/rdf-schema#comment> "An ontology for describing containers and their software components." .
+<http://dockerpedia.inf.utfsm.cl/vocab> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "dpv"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
 <http://dockerpedia.inf.utfsm.cl/vocab> <http://www.w3.org/2002/07/owl#versionInfo> "0.1.0" .
 # 
 # 
@@ -19,6 +20,21 @@
 # #
 # #################################################################
 # 
+# 
+# http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # http://www.w3.org/2000/01/rdf-schema#seeAlso
 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dockerpedia.inf.utfsm.cl/vocab#SoftwareVulnerability> .
@@ -98,6 +114,11 @@
 <http://dockerpedia.inf.utfsm.cl/vocab#hasRevision> <http://www.w3.org/2000/01/rdf-schema#range> <http://dockerpedia.inf.utfsm.cl/vocab#SecurityRevision> .
 <http://dockerpedia.inf.utfsm.cl/vocab#hasRevision> <http://www.w3.org/2000/01/rdf-schema#comment> "one package version may have a security revision fixing some vulnerability" .
 # 
+# http://dockerpedia.inf.utfsm.cl/vocab#hasVersion
+<http://dockerpedia.inf.utfsm.cl/vocab#hasVersion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://dockerpedia.inf.utfsm.cl/vocab#hasVersion> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dockerpedia.inf.utfsm.cl/vocab#SoftwarePackage> .
+<http://dockerpedia.inf.utfsm.cl/vocab#hasVersion> <http://www.w3.org/2000/01/rdf-schema#range> <http://dockerpedia.inf.utfsm.cl/vocab#PackageVersion> .
+# 
 # http://dockerpedia.inf.utfsm.cl/vocab#hasVulnerability
 <http://dockerpedia.inf.utfsm.cl/vocab#hasVulnerability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://dockerpedia.inf.utfsm.cl/vocab#hasVulnerability> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dockerpedia.inf.utfsm.cl/vocab#PackageVersion> .
@@ -136,6 +157,7 @@
 # http://dockerpedia.inf.utfsm.cl/vocab#isPackageOf
 <http://dockerpedia.inf.utfsm.cl/vocab#isPackageOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://dockerpedia.inf.utfsm.cl/vocab#isPackageOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/wicus-stack#SoftwareComponent> .
+<http://purl.org/net/wicus-stack#SoftwareComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://dockerpedia.inf.utfsm.cl/vocab#isPackageOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://dockerpedia.inf.utfsm.cl/vocab#OperatingSystem> .
 <http://dockerpedia.inf.utfsm.cl/vocab#isPackageOf> <http://www.w3.org/2000/01/rdf-schema#comment> "software components are package on an Operating System" .
 # 
@@ -161,6 +183,7 @@
 <http://dockerpedia.inf.utfsm.cl/vocab#usesOS> <http://www.w3.org/2000/01/rdf-schema#comment> "a software layer use an Operating System" .
 # 
 # http://purl.org/net/wicus-stack#hasVersion
+<http://purl.org/net/wicus-stack#hasVersion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.org/net/wicus-stack#hasVersion> <http://www.w3.org/2000/01/rdf-schema#range> <http://dockerpedia.inf.utfsm.cl/vocab#PackageVersion> .
 # 
 # 
@@ -198,6 +221,7 @@
 # http://dockerpedia.inf.utfsm.cl/vocab#DockerFile
 <http://dockerpedia.inf.utfsm.cl/vocab#DockerFile> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://dockerpedia.inf.utfsm.cl/vocab#DockerFile> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/wicus-stack#DeploymentScript> .
+<http://purl.org/net/wicus-stack#DeploymentScript> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://dockerpedia.inf.utfsm.cl/vocab#DockerFile> <http://www.w3.org/2000/01/rdf-schema#comment> "A file containing the instructions required to build an image (docker:SoftwareImage) in the Docker framework" .
 # 
 # http://dockerpedia.inf.utfsm.cl/vocab#FileSystem
@@ -215,6 +239,7 @@
 # http://dockerpedia.inf.utfsm.cl/vocab#ImageVersion
 <http://dockerpedia.inf.utfsm.cl/vocab#ImageVersion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://dockerpedia.inf.utfsm.cl/vocab#ImageVersion> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/wicus-stack#Version> .
+<http://purl.org/net/wicus-stack#Version> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://dockerpedia.inf.utfsm.cl/vocab#ImageVersion> <http://www.w3.org/2000/01/rdf-schema#comment> "version of a software image" .
 # 
 # http://dockerpedia.inf.utfsm.cl/vocab#LayerModification
@@ -255,6 +280,12 @@
 # http://purl.org/dc/elements/1.1/identifier
 <http://purl.org/dc/elements/1.1/identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/dc/elements/1.1/identifier> <http://www.w3.org/2000/01/rdf-schema#comment> "A name that identifies either a unique object or a unique class of objects." .
+# 
+# http://purl.org/net/wicus-stack#DeploymentScript
+# 
+# http://purl.org/net/wicus-stack#SoftwareComponent
+# 
+# http://purl.org/net/wicus-stack#Version
 # 
 # 
 # 

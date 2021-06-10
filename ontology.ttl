@@ -117,6 +117,12 @@ rdfs:seeAlso rdfs:domain :SoftwareVulnerability .
              rdfs:comment "one package version may have a security revision fixing some vulnerability" .
 
 
+###  http://dockerpedia.inf.utfsm.cl/vocab#hasVersion
+:hasVersion rdf:type owl:ObjectProperty ;
+            rdfs:domain :SoftwarePackage ;
+            rdfs:range :PackageVersion .
+
+
 ###  http://dockerpedia.inf.utfsm.cl/vocab#hasVulnerability
 :hasVulnerability rdf:type owl:ObjectProperty ;
                   rdfs:domain :PackageVersion ;

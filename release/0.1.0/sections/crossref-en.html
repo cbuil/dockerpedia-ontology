@@ -99,6 +99,7 @@ This section provides details for each class and property defined by The DockerP
             <a href="http://purl.org/net/wicus-stack#DeploymentScript"
                target="_blank"
                title="http://purl.org/net/wicus-stack#DeploymentScript">deployment script</a>
+            <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>is in domain of</dt>
          <dd>
@@ -241,6 +242,7 @@ This section provides details for each class and property defined by The DockerP
             <a href="http://purl.org/net/wicus-stack#Version"
                target="_blank"
                title="http://purl.org/net/wicus-stack#Version">version</a>
+            <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
@@ -302,6 +304,7 @@ This section provides details for each class and property defined by The DockerP
             <a href="http://purl.org/net/wicus-stack#Version"
                target="_blank"
                title="http://purl.org/net/wicus-stack#Version">version</a>
+            <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>is in domain of</dt>
          <dd>
@@ -321,6 +324,8 @@ This section provides details for each class and property defined by The DockerP
          <dd>
             <a href="#fixPackageVersion"
                title="http://dockerpedia.inf.utfsm.cl/vocab#fixPackageVersion">fix package version</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasVersion" title="http://dockerpedia.inf.utfsm.cl/vocab#hasVersion">has version</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.org/net/wicus-stack#hasVersion" title="http://purl.org/net/wicus-stack#hasVersion">has version</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#isModifiedBy"
                title="http://dockerpedia.inf.utfsm.cl/vocab#isModifiedBy">is modified by</a>
             <sup class="type-op" title="object property">op</sup>
@@ -407,10 +412,12 @@ This section provides details for each class and property defined by The DockerP
             <a href="http://purl.org/net/wicus-stack#SoftwareComponent"
                target="_blank"
                title="http://purl.org/net/wicus-stack#SoftwareComponent">software component</a>
+            <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>is in domain of</dt>
          <dd>
             <a href="#deployedOn" title="http://dockerpedia.inf.utfsm.cl/vocab#deployedOn">deployed on</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasVersion" title="http://dockerpedia.inf.utfsm.cl/vocab#hasVersion">has version</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
          <dt>is in range of</dt>
@@ -513,6 +520,16 @@ This section provides details for each class and property defined by The DockerP
          <a href="#hasRevision"
             title="http://dockerpedia.inf.utfsm.cl/vocab#hasRevision">
             <span>has revision</span>
+         </a>
+      </li>
+      <li>
+         <a href="#hasVersion" title="http://dockerpedia.inf.utfsm.cl/vocab#hasVersion">
+            <span>has version</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://purl.org/net/wicus-stack#hasVersion" title="http://purl.org/net/wicus-stack#hasVersion">
+            <span>has version</span>
          </a>
       </li>
       <li>
@@ -866,6 +883,48 @@ This section provides details for each class and property defined by The DockerP
          </dl>
       </div>
    </div>
+   <div class="entity" id="hasVersion">
+      <h3>has version<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://dockerpedia.inf.utfsm.cl/vocab#hasVersion</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#SoftwarePackage"
+                  title="http://dockerpedia.inf.utfsm.cl/vocab#SoftwarePackage">software package</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#PackageVersion"
+                  title="http://dockerpedia.inf.utfsm.cl/vocab#PackageVersion">package version</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://purl.org/net/wicus-stack#hasVersion">
+      <h3>has version<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/net/wicus-stack#hasVersion</p>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="#PackageVersion"
+                  title="http://dockerpedia.inf.utfsm.cl/vocab#PackageVersion">package version</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="hasVulnerability">
       <h3>has vulnerability<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -1044,6 +1103,7 @@ This section provides details for each class and property defined by The DockerP
                <a href="http://purl.org/net/wicus-stack#SoftwareComponent"
                   target="_blank"
                   title="http://purl.org/net/wicus-stack#SoftwareComponent">software component</a>
+               <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
             <dd>
@@ -1077,6 +1137,7 @@ This section provides details for each class and property defined by The DockerP
                <a href="http://purl.org/net/wicus-stack#SoftwareComponent"
                   target="_blank"
                   title="http://purl.org/net/wicus-stack#SoftwareComponent">software component</a>
+               <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
       </div>

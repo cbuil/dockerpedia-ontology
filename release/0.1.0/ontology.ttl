@@ -14,6 +14,7 @@
                                                                                    "Carlos Buil-Aranda" ,
                                                                                    "Maximiliano Osorio" ;
                                          <http://purl.org/dc/elements/1.1/title> "The DockerPedia Ontology" ;
+                                         <http://purl.org/dc/terms/description> "This ontology describes Docker and its components for virtualizing software."^^rdfs:Literal ;
                                          <http://purl.org/dc/terms/license> """The MIT License (MIT)
 Copyright © 2021, Maximiliano Osorio, Carlos Buil, Hernán Vargas, Daniel Garijo, Idafen Santana.
 
@@ -22,14 +23,34 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE."""^^rdfs:Literal ;
-                                         <http://purl.org/vocab/vann/preferredNamespacePrefix> "dp" ;
                                          <http://purl.org/vocab/vann/preferredNamespaceUri> "http://dockerpedia.inf.utfsm.cl/vocab#" ;
                                          rdfs:comment "An ontology for describing containers and their software components." ;
+                                         rdfs:isDefinedBy "dpv"^^rdfs:Literal ;
                                          owl:versionInfo "0.1.0" .
 
 #################################################################
 #    Annotation properties
 #################################################################
+
+###  http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
+
 
 ###  http://www.w3.org/2000/01/rdf-schema#seeAlso
 rdfs:seeAlso rdfs:domain :SoftwareVulnerability .
@@ -116,6 +137,12 @@ rdfs:seeAlso rdfs:domain :SoftwareVulnerability .
              rdfs:comment "one package version may have a security revision fixing some vulnerability" .
 
 
+###  http://dockerpedia.inf.utfsm.cl/vocab#hasVersion
+:hasVersion rdf:type owl:ObjectProperty ;
+            rdfs:domain :SoftwarePackage ;
+            rdfs:range :PackageVersion .
+
+
 ###  http://dockerpedia.inf.utfsm.cl/vocab#hasVulnerability
 :hasVulnerability rdf:type owl:ObjectProperty ;
                   rdfs:domain :PackageVersion ;
@@ -190,7 +217,8 @@ rdfs:seeAlso rdfs:domain :SoftwareVulnerability .
 
 
 ###  http://purl.org/net/wicus-stack#hasVersion
-<http://purl.org/net/wicus-stack#hasVersion> rdfs:range :PackageVersion .
+<http://purl.org/net/wicus-stack#hasVersion> rdf:type owl:ObjectProperty ;
+                                             rdfs:range :PackageVersion .
 
 
 #################################################################
@@ -291,6 +319,18 @@ rdfs:seeAlso rdfs:domain :SoftwareVulnerability .
 ###  http://purl.org/dc/elements/1.1/identifier
 <http://purl.org/dc/elements/1.1/identifier> rdf:type owl:Class ;
                                              rdfs:comment "A name that identifies either a unique object or a unique class of objects." .
+
+
+###  http://purl.org/net/wicus-stack#DeploymentScript
+<http://purl.org/net/wicus-stack#DeploymentScript> rdf:type owl:Class .
+
+
+###  http://purl.org/net/wicus-stack#SoftwareComponent
+<http://purl.org/net/wicus-stack#SoftwareComponent> rdf:type owl:Class .
+
+
+###  http://purl.org/net/wicus-stack#Version
+<http://purl.org/net/wicus-stack#Version> rdf:type owl:Class .
 
 
 #################################################################
