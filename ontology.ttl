@@ -119,6 +119,7 @@ rdfs:seeAlso rdfs:domain :SoftwareVulnerability .
 
 ###  http://dockerpedia.inf.utfsm.cl/vocab#hasVersion
 :hasVersion rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf <http://purl.org/net/wicus-stack#hasVersion> ;
             rdfs:domain :SoftwarePackage ;
             rdfs:range :PackageVersion .
 
