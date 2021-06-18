@@ -196,10 +196,6 @@ rdfs:seeAlso rdfs:domain :SoftwareVulnerability .
         rdfs:comment "a software layer use an Operating System" .
 
 
-###  http://purl.org/net/wicus-stack#hasVersion
-<http://purl.org/net/wicus-stack#hasVersion> rdfs:range :PackageVersion .
-
-
 #################################################################
 #    Data properties
 #################################################################
