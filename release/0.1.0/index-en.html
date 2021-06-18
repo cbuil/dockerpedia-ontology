@@ -8,9 +8,9 @@
 <!-- SCHEMA.ORG METADATA -->
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://dockerpedia.inf.utfsm.cl/vocab","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://dockerpedia.inf.utfsm.cl/vocab","name":"The DockerPedia Ontology", "headline":"This ontology describes Docker and its components for virtualizing software.", "datePublished":"Thu Jun 10 10:20:57 CLT 2021", "version":"0.1.0", "license":"https://opensource.org/licenses/MIT", "author":[{"@type":"Person","name":"Hernán Vargas"},{"@type":"Person","name":"Daniel Garijo"},{"@type":"Person","name":"Idafen Santana"},{"@type":"Person","name":"Carlos Buil-Aranda"},{"@type":"Person","name":"Maximiliano Osorio"}]}</script>
 
-<script src="resources/jquery.js"></script> 
-<script src="resources/marked.min.js"></script> 
-    <script> 
+<script src="resources/jquery.js"></script>
+<script src="resources/marked.min.js"></script>
+    <script>
 function loadHash() {
   jQuery(".markdown").each(function(el){jQuery(this).after(marked(jQuery(this).text())).remove()});
 	var hash = location.hash;
@@ -40,18 +40,18 @@ function loadTOC(){
 		}
 	  });
 	  t+='</ul>';
-	  $("#toc").html(t); 
+	  $("#toc").html(t);
 }
  $.fn.ignore = function(sel){
         return this.clone().find(sel||">*").remove().end();
  };    $(function(){
-      $("#abstract").load("sections/abstract-en.html"); 
-      $("#introduction").load("sections/introduction-en.html"); 
-      $("#overview").load("sections/overview-en.html"); 
-      $("#crossref").load("sections/crossref-en.html", null, loadHash); 
+      $("#abstract").load("sections/abstract-en.html");
+      $("#introduction").load("sections/introduction-en.html");
+      $("#overview").load("sections/overview-en.html");
+      $("#crossref").load("sections/crossref-en.html", null, loadHash);
     });
-    </script> 
-  </head> 
+    </script>
+  </head>
 
 <body>
 <div class="container">
@@ -66,7 +66,7 @@ function loadTOC(){
 <dt>Revision:</dt>
 <dd>0.1.0</dd>
 <dt>Authors:</dt>
-<dd>Hernán Vargas</dd><dd>Daniel Garijo</dd><dd>Idafen Santana</dd><dd>Carlos Buil-Aranda</dd><dd>Maximiliano Osorio</dd>
+<dd>Maximiliano Osorio</dd><dd>Hernán Vargas</dd><dd>Idafen Santana</dd><dd>Daniel Garijo</dd><dd>Carlos Buil-Aranda</dd>
 
 <dt>Download serialization:</dt><dd><span><a href="ontology.json" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.xml" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License: </dt><dd>
 <a href="https://opensource.org/licenses/MIT" rel="license" target="_blank">
@@ -74,7 +74,7 @@ function loadTOC(){
 </a></dd>
 <br/></dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
 <!-- <dt>Evaluation:</dt><dd><a href="OOPSEvaluation/OOPSeval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
-<dd>Hernán Vargas,Daniel Garijo,Idafen Santana,Carlos Buil-Aranda,Maximiliano Osorio. The DockerPedia Ontology. Revision: 0.1.0.</dd>
+<dd>Maximiliano Osorio, Hernán Vargas, Idafen Santana, Daniel Garijo, Carlos Buil-Aranda. The DockerPedia Ontology. Revision: 0.1.0.</dd>
 </dl>
 
 <hr/>
